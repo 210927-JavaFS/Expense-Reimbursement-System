@@ -15,6 +15,7 @@ showReimsButton.innerText = "View All Reimbursements";
 showReimsButton.className ="btn btn-primary";
 
 buttonRow.appendChild(showReimsButton);
+document.getElementById("buttonRow").style.display = 'block';
 
 async function login(){
     let user = {
