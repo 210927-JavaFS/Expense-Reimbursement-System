@@ -110,11 +110,11 @@ async function login(){
       let newReimbTypeId = document.getElementById("reimbTypeId").value;
       
       newReimbStatusId = {
-        reimbId:getUser(newReimbAuthor).ReimbId,
+        reimbId:getUser(newReimbAuthor).ersUserId,
         status:newReimbStatusId
       }
       newReimbTypeId = {
-        reimbId:getUser(newReimbAuthor).ReimbId,
+        reimbId:getUser(newReimbAuthor).ersUserId,
         status:newReimbTypeId
       }
 
