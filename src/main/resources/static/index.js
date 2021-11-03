@@ -14,6 +14,8 @@ showReimsButton.onclick = showReimbs;
 showReimsButton.innerText = "View All Reimbursements";
 showReimsButton.className ="btn btn-primary";
 
+buttonRow.appendChild(showReimsButton);
+
 async function login(){
     let user = {
       username:document.getElementById("username").value,
