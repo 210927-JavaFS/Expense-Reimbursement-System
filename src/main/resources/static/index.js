@@ -115,7 +115,7 @@ async function login(){
       }
       newReimbTypeId = {
         reimbTypeId:5,
-        status:newReimbTypeId
+        type:newReimbTypeId
       }
 
       let reimb =  {
