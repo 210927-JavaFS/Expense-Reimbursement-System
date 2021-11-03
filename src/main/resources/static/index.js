@@ -129,7 +129,7 @@ async function login(){
         reimbTypeID:newReimbTypeId
     
       }
-    
+      console.log(reimb);
       return reimb;
     }
     
