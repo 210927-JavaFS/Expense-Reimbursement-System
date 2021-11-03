@@ -4,14 +4,15 @@ let loginButton = document.getElementById('loginButton');
 let buttonRow = document.getElementById("buttonRow");
 let registerButton = document.getElementById("registerButton");
 let requestReimbButton = document.getElementById('requestReimbButton');
+let showReimsButton = document.createElement("button");
 
 loginButton.onclick = login; 
 registerButton.onclick = addUser;
 requestReimbButton.onclick = addReimb;
+showReimsButton.onclick = showReimbs;
 
-
-
-
+showReimsButton.innerText = "View All Reimbursements";
+showReimsButton.className ="btn btn-primary";
 
 async function login(){
     let user = {
@@ -23,7 +24,7 @@ async function login(){
         body:JSON.stringify(user),
         credentials:"include" 
       });
-
+      console.log(response.status);
       if(response.status===200){
         document.getElementsByClassName("formClass")[0].innerHTML = '';
         buttonRow.appendChild(userButton);
@@ -38,7 +39,38 @@ async function login(){
       }
     }
 
+    async function getReimbs(){
+      let response = await fetch(URL+"ErsReimbursement", {credentials:"include"});
+      if(response.status===200){
+        let data = await response.json();
+        populateReimbTable(data);
+        document.getElementById("reimbTable").style.display = 'block';
+      }else{
+        console.log("Reimbs not available.");
+      }
+    }
+
+    function populateReimbTable(data){
+      for(let reimb of data){
+        let row = document.createElement("tr");
+        for(let cell in reimb){
+          let td = document.createElement("td");
+          if (cell!="reimbAuthor" && cell!="reimbResolver" && cell!="reimbStatus" && cell!="reimbType") {
+            td.innerText = reimb[cell];
+          }
+          if (cell=="reimbAuthor") td.innerText = `${reimb[cell].ersUsername}`;
+          if (cell == "reimbResolver" && reimb[cell]!=null) td.innerText = `${reimb[cell].ersUsername}`;
+          if (cell=="reimbStatus") td.innerText = `${reimb[cell].status}`;
+          if (cell=="reimbType") td.innerText = `${reimb[cell].type}`;
+          if(cell == "submittedlDate") td.innerText = `${new Date(reimb[cell])}`;
+          if(cell == "resolvedlDate")
+            if (reimb[cell]!=null) td.innerText = `${new Date(reimb[cell])}`;
     
+          row.appendChild(td);
+        }
+        tbody.appendChild(row);
+      }
+    }
     
     function getNewReimb(){
       let newReimbAmount = document.getElementById("reimbAmount").value;
