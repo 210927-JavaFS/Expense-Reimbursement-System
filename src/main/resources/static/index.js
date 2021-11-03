@@ -89,8 +89,8 @@ async function login(){
           if (cell == "reimbResolver" && reimb[cell]!=null) td.innerText = `${reimb[cell].ersUsername}`;
           if (cell=="reimbStatusId") td.innerText = `${reimb[cell].status}`;
           if (cell=="reimbTypeId") td.innerText = `${reimb[cell].type}`;
-          if(cell == "submittedlDate") td.innerText = `${new Date(reimb[cell])}`;
-          if(cell == "resolvedlDate")
+          if(cell == "submittedDate") td.innerText = `${new Date(reimb[cell])}`;
+          if(cell == "resolvedDate")
             if (reimb[cell]!=null) td.innerText = `${new Date(reimb[cell])}`;
     
           row.appendChild(td);
@@ -125,8 +125,8 @@ async function login(){
         reimbDescription:newReimbDescription,
         reimbAuthor:getUser(newReimbAuthor),
         reimbResolver:getUser(newReimbResolver),
-        reimbStatusID:newReimbStatusId,
-        reimbTypeID:newReimbTypeId
+        reimbStatusId:newReimbStatusId,
+        reimbTypeId:newReimbTypeId
     
       }
       console.log(reimb);
