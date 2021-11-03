@@ -54,6 +54,9 @@ async function login(){
     }
 
     function populateReimbTable(data){
+      
+      let tbody = document.getElementById("reimbBody");
+
       for(let reimb of data){
         let row = document.createElement("tr");
         for(let cell in reimb){
