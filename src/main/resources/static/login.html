@@ -9,72 +9,97 @@
 
 </head>
 <body class="container-fluid">
-  <div class="formClass">
+  <div class="login">
     <form class="form-control">
       <label for="username">Username</label>
       <input type="text" id="username" name="username">
+
       <label for="password">Password</label>
       <input type="password" id="password" name="password">
     </form>
     <button class="btn btn-danger" id="loginButton">Login</button>
   </div>
-  <div class="row" id="buttonRow">
 
-  </div>
+  <br>
+  <br>
 
+  <div class="row" id="buttonRow" style="display: none"></div>
+
+  <br>
+  <br>
+
+<div id ="userTable" style="display: none">
   <table class="table">
     <thead>
       <tr>
-        <th class="col-sm-1">User ID</th>
+        <th class="col-sm-2">User ID</th>
         <th class="col-sm-2">Username</th>
-        <th class="col-sm-1">First Name</th>
-        <th class="col-sm-1">Last Name</th>
+        <th class="col-sm-2">First Name</th>
+        <th class="col-sm-2">Last Name</th>
         <th class="col-sm-2">Email</th>
-        <th class="col-sm-6">Role ID</th>
+        <th class="col-sm-2">Role</th>
       </tr>
     </thead>
     <tbody id="userBody">
     </tbody>
   </table>
-  <br>
-  <br>
-  <table class="table">
-    <thead>
-      <tr>
-        <th class="col-sm-2">Reimb ID</th>
-        <th class="col-sm-2">Amount</th>
-        <th class="col-sm-2">Submitted</th>
-        <th class="col-sm-2">Resolved</th>
-        <th class="col-sm-2">Description</th>
-        <th class="col-sm-1">Receipt</th>
-        <th class="col-sm-1">Author</th>
-        <th class="col-sm-1">Resolver</th>
-        <th class="col-sm-1">Status ID</th>
-        <th class="col-sm-1">Type ID</th>
-      </tr>
-    </thead>
-    <tbody id="reimbBody">
-    </tbody>
-  </table>
-
-  <br>
-  <br>
-
+</div>
+  
+<div id="addUser" style= "display: none">
   <form class="form-control">
+     <label for="username">Username</label>
+     <input type="text" id="username" name="username">
+     
+     <label for="password">Password</label>
+     <input type="text" id="password" name="password">
+     
+     <label for="firstName">First Name</label>
+     <input type="text" id="firstName" name="firstName">
+     
+     <label for="lastName">Last Name</label>
+     <input type="text" id="lastName" name="lastName">
+     
+     <label for="email">Email</label>
+     <input type="text" id="email" name="email">
+     
+     <label for="role">Role</label>
+     <input type="text" id="role" name="role">
+   </form>
+   <button class="btn btn-primary" id="registerButton">Register</button>
+ </div>
+
+  <br>
+  <br>
+  <div id = "reimbTable" style="display: none">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="col-sm-1">Reimb ID</th>
+          <th class="col-sm-1">Amount</th>
+          <th class="col-sm-1">Submitted</th>
+          <th class="col-sm-1">Resolved</th>
+          <th class="col-sm-1">Description</th>
+          <th class="col-sm-1">Author</th>
+          <th class="col-sm-1">Resolver</th>
+          <th class="col-sm-1">Status</th>
+          <th class="col-sm-1">Type</th>
+        </tr>
+      </thead>
+      <tbody id="reimbBody">
+      </tbody>
+    </table>
+  </div>
+
+  <br>
+  <br>
+
+<div id="addReimb" style= "display: none">
+ <form class="form-control">
     <label for="reimbAmount">Reimb Amount</label>
     <input type="text" id="reimbAmount" name="reimbAmount">
     
-    <label for="reimbSubmitted">Submitted</label>
-    <input type="text" id="reimbSubmitted" name="reimbSubmitted">
-    
-    <label for="reimbResolved">Resolved</label>
-    <input type="text" id="reimbResolved" name="reimbResolved">
-    
     <label for="reimbDescription">Description</label>
     <input type="text" id="reimbDescription" name="reimbDescription">
-    
-    <label for="reimbReceipt">Receipt</label>
-    <input type="text" id="reimbReceipt" name="reimbReceipt">
     
     <label for="reimbAuthor">Author</label>
     <input type="text" id="reimbAuthor" name="reimbAuthor">
@@ -82,14 +107,15 @@
     <label for="reimbResolver">Resolver</label>
     <input type="text" id="reimbResolver" name="reimbResolver">
     
-    <label for="reimbStatusID">Status ID</label>
-    <input type="text" id="reimbStatusID" name="reimbStatusID">
+    <label for="reimbStatus">Status</label>
+    <input type="text" id="reimbStatus" name="reimbStatus">
     
-    <label for="reimbTypeID">Type ID</label>
-    <input type="text" id="reimbTypeID" name="reimbTypeID">
-    
+    <label for="reimbType">Type</label>
+    <input type="text" id="reimbType" name="reimbType">
   </form>
-  <button class="btn btn-primary" id="addReimbButton">Add Reimbursement</button>
+  <button class="btn btn-primary" id="requestReimbButton">Request Reimbursement</button>
+</div>
+
 
  
 

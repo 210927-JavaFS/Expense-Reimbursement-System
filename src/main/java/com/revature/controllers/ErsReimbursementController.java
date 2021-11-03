@@ -68,7 +68,7 @@ public class ErsReimbursementController implements Controller {
 			
 		//}
 		//else {
-			ctx.status(401);
+			//ctx.status(401);
 		//}
 	};
 	
@@ -113,7 +113,7 @@ public class ErsReimbursementController implements Controller {
 	@Override
 	public void addRoutes(Javalin app) {
 		app.get("/ErsReimbursement",this.getAllReimbursements);
-		app.get("/ErsReimbursement/:statusId",this.getReimbursementByStatus);
+		app.get("/ErsReimbursement/status/:statusId",this.getReimbursementByStatus);
 		app.get("/ErsReimbursement/:reimbId",this.getReimbursementById);
 		app.post("/ErsReimbursement", this.addReimbursement);
 		app.put("/ErsReimbursement/:reimbId", this.updateReimbursement);

@@ -1,15 +1,14 @@
 const URL = "http://localhost:8081/";
 
-let buttonRow = document.getElementById("buttonRow");
-let userButton = document.createElement("button");
-let reimbButton = document.createElement("button");
-let addReimbButton = document.getElementById('addReimbButton');
 let loginButton = document.getElementById('loginButton');
+let buttonRow = document.getElementById("buttonRow");
+let registerButton = document.getElementById("registerButton");
+let requestReimbButton = document.getElementById('requestReimbButton');
 
-userButton.onclick = getUsers;
-reimbButton.onclick = getReimbs;
-addReimbButton.onclick = addReimb;
-loginButton.onclick = loginToApp; 
+loginButton.onclick = login; 
+registerButton.onclick = addUser;
+requestReimbButton.onclick = addReimb;
+
 
 
 
@@ -18,7 +17,7 @@ reimbButton.innerText = "See Reimbursements";
 
 
 
-async function loginToApp(){
+async function login(){
     let user = {
       username:document.getElementById("username").value,
       password:document.getElementById("password").value
@@ -100,13 +99,12 @@ async function loginToApp(){
     function getNewReimb(){
       let newReimbAmount = document.getElementById("reimbAmount").value;
       let newReimbSubmitted = document.getElementById("reimbSubmitted").value; 
-      let newReimbResolved = document.getElementById("reimbResolved").value;
-      let newReimbDescription = document.getElementById("reimbDescription").value;
-      let newReimbReceipt= document.getElementById("reimbReceipt").value;
+      let newReimbResolved = Date.now();
+      let newReimbDescription = Date.now();
       let newReimbAuthor = document.getElementById("reimbAuthor").value;
       let newReimbResolver = document.getElementById("reimbResolver").value;
-      let newReimbStatusID = document.getElementById("reimbStatusID").value;
-      let newReimbTypeID = document.getElementById("reimbTypeID").value;
+      let newReimbStatus = document.getElementById("reimbStatus").value;
+      let newReimbType = document.getElementById("reimbType").value;
       
     
       let reimb =  {
@@ -114,11 +112,10 @@ async function loginToApp(){
         reimbSubmitted:newReimbSubmitted,
         reimbResolved:newReimbResolved,
         reimbDescription:newReimbDescription,
-        reimbReceipt:newReimbReceipt,
         reimbAuthor:newReimbAuthor,
         reimbResolver:newReimbResolver,
-        reimbStatusID:newReimbStatusID,
-        reimbTypeID:newReimbTypeID
+        reimbStatusID:newReimbStatus,
+        reimbTypeID:newReimbType
     
       }
     
@@ -128,7 +125,7 @@ async function loginToApp(){
     async function addReimb(){
       let reimb = getNewReimb();
     
-      let response = await fetch(URL+"reimbs", {
+      let response = await fetch(URL+"ErsReimbursement", {
         method:'POST',
         body:JSON.stringify(reimb),
         credentials:"include"

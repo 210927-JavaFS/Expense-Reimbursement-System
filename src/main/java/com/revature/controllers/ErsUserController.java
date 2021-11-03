@@ -14,8 +14,8 @@ public class ErsUserController implements Controller{
 	
 	public Handler getUser = (ctx) -> {
 		//if(ctx.req.getSession(false) != null) {
-			UserDTO userDTO = ctx.bodyAsClass(UserDTO.class);
-			ErsUser ersUser = ersUserService.getUser(userDTO.getUsername());
+			String idString = ctx.pathParam("username");
+			ErsUser ersUser = ersUserService.getUser(idString);
 			ctx.json(ersUser);
 			ctx.status(200);
 		//}
@@ -69,7 +69,7 @@ public class ErsUserController implements Controller{
 	
 	@Override
 	public void addRoutes(Javalin app) {
-		app.get("/ErsUser", this.getUser);
+		app.get("/ErsUser/:username", this.getUser);
 		app.post("/Login", this.loginAttempt);
 		app.post("/ErsUser", this.addUser);
 		app.delete("/ErsUser", this.deleteUser);
