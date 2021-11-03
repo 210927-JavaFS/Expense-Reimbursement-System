@@ -1,5 +1,7 @@
 package com.revature.DAO;
 
+import java.util.List;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -12,7 +14,9 @@ public class ErsUserDAOImpl implements ErsUserDAO{
 	@Override
 	public ErsUser getUser(String username) {
 		Session session = HibernateUtil.getSession();
-		return session.get(ErsUser.class, username);
+		List<ErsUser> ersUser = session.createQuery("FROM ErsUser WHERE ersusername = '" +username+ "'").list();
+		return ersUser.get(0);
+
 	}
 
 	@Override

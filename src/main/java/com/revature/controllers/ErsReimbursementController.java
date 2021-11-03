@@ -13,22 +13,22 @@ public class ErsReimbursementController implements Controller {
 	private ErsReimbursementService ersReimbursementService = new ErsReimbursementService();
 
 	public Handler getAllReimbursements = (ctx) -> {
-		if (ctx.req.getSession(false) != null) {
+		//if (ctx.req.getSession(false) != null) {
 			List<ErsReimbursement> list = ersReimbursementService.getAllReimbursements();
 
 			ctx.json(list);
 			ctx.status(200);
-		} else {
-			ctx.status(401);
-		}
+		//} else {
+		//	ctx.status(401);
+		//}
 	};
 
 	public Handler getReimbursementByStatus = (ctx) -> {
-		if (ctx.req.getSession(false) != null) {
+		//if (ctx.req.getSession(false) != null) {
 			try {
 				String idString = ctx.pathParam("statusId");
-				int reimbStatusId = Integer.parseInt(idString);
-				List<ErsReimbursement> list = ersReimbursementService.getReimbursementByStatus(reimbStatusId);
+				//int reimbStatusId = Integer.parseInt(idString);
+				List<ErsReimbursement> list = ersReimbursementService.getReimbursementByStatus(idString);
 				ctx.json(list);
 				ctx.status(200);
 			}
@@ -36,13 +36,13 @@ public class ErsReimbursementController implements Controller {
 				e.printStackTrace();
 				ctx.status(406);
 			}
-		}
+		//}
 	};
 	
 	public Handler getReimbursementById = (ctx) -> {
-		if(ctx.req.getSession(false) != null) {
+		//if(ctx.req.getSession(false) != null) {
 			try {
-				String idString = ctx.pathParam("id");
+				String idString = ctx.pathParam("reimbId");
 				int reimbId = Integer.parseInt(idString);
 				ErsReimbursement ersReimbursement= ersReimbursementService.getReimbursementById(reimbId);
 				ctx.json(ersReimbursement);
@@ -52,11 +52,11 @@ public class ErsReimbursementController implements Controller {
 				e.printStackTrace();
 				ctx.status(406);
 			}
-		}
+		//}
 	};
 	
 	public Handler addReimbursement = (ctx) -> {
-		if(ctx.req.getSession(false) != null) {
+		//if(ctx.req.getSession(false) != null) {
 
 				ErsReimbursement reimbursement= ctx.bodyAsClass(ErsReimbursement.class);
 				if(ersReimbursementService.addReimbursement(reimbursement)) {
@@ -66,14 +66,14 @@ public class ErsReimbursementController implements Controller {
 					ctx.status(400);
 				}
 			
-		}
-		else {
+		//}
+		//else {
 			ctx.status(401);
-		}
+		//}
 	};
 	
 	public Handler updateReimbursement = (ctx) -> {
-		if(ctx.req.getSession(false) != null) {
+		//if(ctx.req.getSession(false) != null) {
 
 				ErsReimbursement reimbursement= ctx.bodyAsClass(ErsReimbursement.class);
 				if(ersReimbursementService.addReimbursement(reimbursement)) {
@@ -83,14 +83,14 @@ public class ErsReimbursementController implements Controller {
 					ctx.status(400);
 				}
 			
-		}
-		else {
-			ctx.status(401);
-		}
+		//}
+		//else {
+		//	ctx.status(401);
+		//}
 	};
 	
 	public Handler deleteReimbursement = (ctx) -> {
-		if(ctx.req.getSession(false) != null) {
+		//if(ctx.req.getSession(false) != null) {
 				String idString = ctx.pathParam("reimbId");
 				try {
 					int reimbId = Integer.parseInt(idString);
@@ -104,10 +104,10 @@ public class ErsReimbursementController implements Controller {
 				}
 				
 				
-		}
-		else {
-			ctx.status(401);
-		}
+		//}
+		//else {
+			//ctx.status(401);
+		//}
 	};
 	
 	@Override

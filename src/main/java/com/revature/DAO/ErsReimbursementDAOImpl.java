@@ -1,5 +1,6 @@
 package com.revature.DAO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.HibernateException;
@@ -7,6 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import com.revature.models.ErsReimbursement;
+import com.revature.models.ErsReimbursementStatus;
+import com.revature.models.ErsUser;
 import com.revature.utils.HibernateUtil;
 
 public class ErsReimbursementDAOImpl implements ErsReimbursementDAO{
@@ -18,15 +21,23 @@ public class ErsReimbursementDAOImpl implements ErsReimbursementDAO{
 	}
 
 	@Override
-	public List<ErsReimbursement> getReimbursementByStatus(int reimbStatusId) {
+	public List<ErsReimbursement> getReimbursementByStatus(String status) {
 		Session session = HibernateUtil.getSession();
-		return session.createQuery("FROM ErsReimbursement WHERE reimbStatusId = " + reimbStatusId).list();
+		List<ErsReimbursementStatus> statusList = session.createQuery("FROM ErsReimbursementStatus WHERE status = '" + status + "'").list();
+		List<Integer> idList = new ArrayList<>();
+		List<ErsReimbursement> ersReimbursement = new ArrayList<>();
+		for(ErsReimbursementStatus s : statusList ) {
+			ersReimbursement.add(this.getReimbursementById(s.getReimbStatusId()));
+		}
+		return ersReimbursement;
+		
 	}
 
 	@Override
 	public ErsReimbursement getReimbursementById(int id) {
 		Session session = HibernateUtil.getSession();
-		return session.get(ErsReimbursement.class, id);
+		List<ErsReimbursement> ersReimbursement = session.createQuery("FROM ErsReimbursement WHERE reimbid = '" +id+ "'").list();
+		return ersReimbursement.get(0);
 	}
 
 	@Override

@@ -13,19 +13,19 @@ public class ErsUserController implements Controller{
 	
 	
 	public Handler getUser = (ctx) -> {
-		if(ctx.req.getSession(false) != null) {
+		//if(ctx.req.getSession(false) != null) {
 			UserDTO userDTO = ctx.bodyAsClass(UserDTO.class);
 			ErsUser ersUser = ersUserService.getUser(userDTO.getUsername());
 			ctx.json(ersUser);
 			ctx.status(200);
-		}
-		else {
-			ctx.status(401);
-		}
+		//}
+		//else {
+		//	ctx.status(401);
+		//}
 	};
 	
 	public Handler addUser = (ctx) -> {
-		if(ctx.req.getSession(false) != null) {
+		//if(ctx.req.getSession(false) != null) {
 			
 			ErsUser ersUser = ctx.bodyAsClass(ErsUser.class);
 			if(ersUserService.addUser(ersUser)) {
@@ -34,14 +34,14 @@ public class ErsUserController implements Controller{
 			else {
 				ctx.status(400);
 			}
-		}
-		else {
-			ctx.status(400);
-		}
+		//}
+		//else {
+		//	ctx.status(400);
+		//}
 	};
 	
 	public Handler deleteUser = (ctx) -> {
-		if(ctx.req.getSession(false) != null) {
+		//if(ctx.req.getSession(false) != null) {
 			ErsUser ersUser = ctx.bodyAsClass(ErsUser.class);
 			if(ersUserService.deleteUser(ersUser)) {
 				ctx.status(201);
@@ -49,10 +49,10 @@ public class ErsUserController implements Controller{
 			else {
 				ctx.status(400);
 			}
-		}
-		else {
-			ctx.status(400);
-		}
+		//}
+		//else {
+		//	ctx.status(400);
+		//}
 	};
 	
 	private Handler loginAttempt = (ctx) -> {

@@ -16,24 +16,24 @@ public class ErsReimbursement {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int reimbId;
-	private int reimbAmount;
+	private double reimbAmount;
 	private Timestamp reimbSubmitted;
 	private Timestamp reimbResolved;
 	private String reimbDescription;
 	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name="reimbAuthor")
+	//@JoinColumn(name="reimbAuthor")
 	private ErsUser reimbAuthor;
 	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinColumn(name="reimbResolver")
+	//@JoinColumn(name="reimbResolver")
     private ErsUser reimbResolver;
     @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-    @JoinColumn(name="reimbStatusId")
+   // @JoinColumn(name="reimbStatusId")
     private ErsReimbursementStatus reimbStatusId;
     @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-    @JoinColumn(name="reimbTypeId")
+   // @JoinColumn(name="reimbTypeId")
     private ErsReimbursementType reimbTypeId;
 	
-    public ErsReimbursement(int reimbId, int reimbAmount, Timestamp reimbSubmitted, Timestamp reimbResolved,
+    public ErsReimbursement(int reimbId, double reimbAmount, Timestamp reimbSubmitted, Timestamp reimbResolved,
 			String reimbDescription, ErsUser reimbAuthor, ErsUser reimbResolver, ErsReimbursementStatus reimbStatusId,
 			ErsReimbursementType reimbTypeId) {
 		super();
@@ -48,7 +48,7 @@ public class ErsReimbursement {
 		this.reimbTypeId = reimbTypeId;
 	}
 
-	public ErsReimbursement(int reimbAmount, Timestamp reimbSubmitted, Timestamp reimbResolved, String reimbDescription,
+	public ErsReimbursement(double reimbAmount, Timestamp reimbSubmitted, Timestamp reimbResolved, String reimbDescription,
 			ErsUser reimbAuthor, ErsUser reimbResolver, ErsReimbursementStatus reimbStatusId,
 			ErsReimbursementType reimbTypeId) {
 		super();
@@ -74,7 +74,7 @@ public class ErsReimbursement {
 		this.reimbId = reimbId;
 	}
 
-	public int getReimbAmount() {
+	public double getReimbAmount() {
 		return reimbAmount;
 	}
 
@@ -142,7 +142,7 @@ public class ErsReimbursement {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + reimbAmount;
+		result = (int) (prime * result + reimbAmount);
 		result = prime * result + ((reimbAuthor == null) ? 0 : reimbAuthor.hashCode());
 		result = prime * result + ((reimbDescription == null) ? 0 : reimbDescription.hashCode());
 		result = prime * result + reimbId;

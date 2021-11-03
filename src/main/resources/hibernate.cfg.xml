@@ -22,11 +22,11 @@
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		
 		<!-- Mapping Entity Classes (Making the SF aware of these entities) -->
-		<mapping class="com.revature.models.ErsReimbursement"/>
-		<mapping class="com.revature.models.ErsReimbursementStatus"/>
-		<mapping class="com.revature.models.ErsReimbursementType"/>
-		<mapping class="com.revature.models.ErsUser"/>
-		<mapping class="com.revature.models.ErsUserRole"/>
+		<mapping class="com.revature.models.ErsReimbursement"></mapping>
+		<mapping class="com.revature.models.ErsReimbursementStatus"></mapping>
+		<mapping class="com.revature.models.ErsReimbursementType"></mapping>
+		<mapping class="com.revature.models.ErsUser"></mapping>
+		<mapping class="com.revature.models.ErsUserRole"></mapping>
 		
 	</session-factory>
 

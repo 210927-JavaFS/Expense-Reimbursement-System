@@ -14,8 +14,8 @@ public class ErsReimbursementService {
 		return ersReimbursementDAO.getAllReimbursements();
 	}
 	
-	public List<ErsReimbursement> getReimbursementByStatus(int reimbStatusId){
-		return ersReimbursementDAO.getReimbursementByStatus(reimbStatusId);
+	public List<ErsReimbursement> getReimbursementByStatus(String status){
+		return ersReimbursementDAO.getReimbursementByStatus(status);
 	}
 	
 	public ErsReimbursement getReimbursementById(int id){

@@ -24,7 +24,7 @@ public class ErsUser {
     @Column(unique = true)
     private String userEmail;
     @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-    @JoinColumn(name="ersUserRoleId")
+    //@JoinColumn(name="ersUserRoleId")
     private ErsUserRole userRoleId;
     
 	public ErsUser(int ersUserId, String ersUsername, String ersPassword, String userFirstName, String userLastName,
@@ -120,7 +120,7 @@ public class ErsUser {
 		result = prime * result + ((userEmail == null) ? 0 : userEmail.hashCode());
 		result = prime * result + ((userFirstName == null) ? 0 : userFirstName.hashCode());
 		result = prime * result + ((userLastName == null) ? 0 : userLastName.hashCode());
-		result = prime * result + ((userRoleId == null) ? 0 : userRoleId.hashCode());
+		result = prime * result + userRoleId.getErsUserRoleId();
 		return result;
 	}
 
@@ -160,11 +160,9 @@ public class ErsUser {
 				return false;
 		} else if (!userLastName.equals(other.userLastName))
 			return false;
-		if (userRoleId == null) {
-			if (other.userRoleId != null)
-				return false;
-		} else if (!userRoleId.equals(other.userRoleId))
+		if (userRoleId != other.userRoleId) {
 			return false;
+		}
 		return true;
 	}
 
