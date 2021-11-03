@@ -119,7 +119,7 @@ async function login(){
       }
 
       let reimb =  {
-        reimbAmount:parseInt(newReimbAmount),
+        reimbAmount:parseFloat(newReimbAmount),
         reimbSubmitted:newReimbSubmitted,
         reimbResolved:newReimbResolved,
         reimbDescription:newReimbDescription,
