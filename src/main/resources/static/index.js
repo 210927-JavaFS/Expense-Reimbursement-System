@@ -114,7 +114,7 @@ async function login(){
         status:newReimbStatusId
       }
       newReimbTypeId = {
-        reimbId:getUser(newReimbAuthor).ersUserId,
+        reimbId:getUser(newReimbAuthor).ersUserId.value,
         status:newReimbTypeId
       }
 
