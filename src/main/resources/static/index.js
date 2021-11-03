@@ -54,7 +54,7 @@ async function login(){
     }
 
     function populateReimbTable(data){
-      
+
       let tbody = document.getElementById("reimbBody");
 
       for(let reimb of data){
@@ -66,8 +66,8 @@ async function login(){
           }
           if (cell=="reimbAuthor") td.innerText = `${reimb[cell].ersUsername}`;
           if (cell == "reimbResolver" && reimb[cell]!=null) td.innerText = `${reimb[cell].ersUsername}`;
-          if (cell=="reimbStatus") td.innerText = `${reimb[cell].status}`;
-          if (cell=="reimbType") td.innerText = `${reimb[cell].type}`;
+          if (cell=="reimbStatusId") td.innerText = `${reimb[cell].status}`;
+          if (cell=="reimbTypeId") td.innerText = `${reimb[cell].type}`;
           if(cell == "submittedlDate") td.innerText = `${new Date(reimb[cell])}`;
           if(cell == "resolvedlDate")
             if (reimb[cell]!=null) td.innerText = `${new Date(reimb[cell])}`;
