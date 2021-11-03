@@ -5,17 +5,33 @@ let buttonRow = document.getElementById("buttonRow");
 let registerButton = document.getElementById("registerButton");
 let requestReimbButton = document.getElementById('requestReimbButton');
 let showReimsButton = document.createElement("button");
+let getUserButton = document.createElement("button");
 
 loginButton.onclick = login; 
 registerButton.onclick = addUser;
 requestReimbButton.onclick = addReimb;
 showReimsButton.onclick = showReimbs;
+getUserButton.onclick = getUser;
 
 showReimsButton.innerText = "View All Reimbursements";
 showReimsButton.className ="btn btn-primary";
 
+getUserButton.innerText = "Get User";
+
 buttonRow.appendChild(showReimsButton);
+buttonRow.appendChild(getUserButton);
 document.getElementById("buttonRow").style.display = 'block';
+
+async function getUser(username){
+  let response = await fetch(URL+"ErsUser/"+username, {credential:"include"});
+  if(response.status === 200){
+    let data = await response.json();
+    return data;
+  }
+  else{
+    console.log("Failed to get user.")
+  }
+}
 
 
 async function login(){
@@ -30,9 +46,7 @@ async function login(){
       });
       console.log(response.status);
       if(response.status===200){
-        document.getElementsByClassName("formClass")[0].innerHTML = '';
-        buttonRow.appendChild(userButton);
-        buttonRow.appendChild(reimbButton);
+        document.getElementsByClassName("login")[0].innerHTML = '';
 
       }
       else{
@@ -53,6 +67,7 @@ async function login(){
         console.log("Reimbs not available.");
       }
     }
+
 
 
     function populateReimbTable(data){
@@ -94,15 +109,23 @@ async function login(){
       let newReimbStatusId = document.getElementById("reimbStatusId").value;
       let newReimbTypeId = document.getElementById("reimbTypeId").value;
       
-    
+      newReimbStatusId = {
+        reimbId:getUser(newReimbAuthor).ReimbId,
+        status:newReimbStatusId
+      }
+      newReimbTypeId = {
+        reimbId:getUser(newReimbAuthor).ReimbId,
+        status:newReimbTypeId
+      }
+
       let reimb =  {
         reimbAmount:newReimbAmount,
         reimbSubmitted:newReimbSubmitted,
         reimbResolved:newReimbResolved,
         reimbDescription:newReimbDescription,
-        reimbAuthor:newReimbAuthor,
-        reimbResolver:newReimbResolver,
-        reimbStatusID:newReimbStatusId,
+        reimbAuthor:getUser(newReimbAuthor),
+        reimbResolver:getUser(newReimbResolver),
+        reimbStatusID=newReimbStatusId,
         reimbTypeID:newReimbTypeId
     
       }

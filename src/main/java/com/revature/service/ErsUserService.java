@@ -24,7 +24,7 @@ public class ErsUserService {
 	public static boolean login(UserDTO userDto) {
 		ErsUser user = ersUserDAO.getUser(userDto.username);
 		
-		if(user!=null && (String.valueOf(userDto.password.hashCode())==user.getErsPassword())) {
+		if(user!=null && (userDto.password==user.getErsPassword())) {
 			return true;
 		}
 		
