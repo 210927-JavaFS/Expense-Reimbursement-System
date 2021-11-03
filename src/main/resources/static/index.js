@@ -125,7 +125,7 @@ async function login(){
         reimbDescription:newReimbDescription,
         reimbAuthor:getUser(newReimbAuthor),
         reimbResolver:getUser(newReimbResolver),
-        reimbStatusID=newReimbStatusId,
+        reimbStatusID:newReimbStatusId,
         reimbTypeID:newReimbTypeId
     
       }
