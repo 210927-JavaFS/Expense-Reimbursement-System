@@ -88,7 +88,7 @@ async function login(){
       let newReimbAmount = document.getElementById("reimbAmount").value;
       let newReimbSubmitted = Date.now();
       let newReimbResolved = Date.now();
-      let newReimbDescription = document.getElementById("reimDescription").value;
+      let newReimbDescription = document.getElementById("reimbDescription").value;
       let newReimbAuthor = document.getElementById("reimbAuthor").value;
       let newReimbResolverId = document.getElementById("reimbResolverId").value;
       let newReimbStatusId = document.getElementById("reimbStatusId").value;
