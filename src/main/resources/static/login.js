@@ -12,10 +12,6 @@ requestReimbButton.onclick = addReimb;
 
 
 
-userButton.innerText = "See Users";
-reimbButton.innerText = "See Reimbursements";
-
-
 
 async function login(){
     let user = {
@@ -42,59 +38,7 @@ async function login(){
       }
     }
 
-    async function getUsers(){
-      let response = await fetch(URL+"ErsUser", {credentials:"include"});
     
-      if(response.status === 200){
-        let data = await response.json();
-        populateUsersTable(data);
-      }else{
-        console.log("The Users cannot be accessed");
-      }
-    }
-    
-    function populateUsersTable(data){
-      let tbody = document.getElementById("userBody");
-    
-      tbody.innerHTML="";
-    
-      for(let user of data){
-        let row = document.createElement("tr");
-    
-        for(let cell in user){
-          let td = document.createElement("td");
-          td.innerText=user[cell];
-          row.appendChild(td);
-        }
-        tbody.appendChild(row);
-      }
-    }
-    
-    async function getReimbs(){
-      let response = await fetch(URL+"ErsReimbursement", {credentials:"include"});
-      if(response.status===200){
-        let data = await response.json();
-        populateReimbTable(data);
-      }else{
-        console.log("Reimbs not available.");
-      }
-    }
-    
-    function populateReimbTable(data){
-      let tbody = document.getElementById("reimbBody");
-    
-      tbody.innerHTML="";
-    
-      for(let reimb of data){
-        let row = document.createElement("tr");
-        for(let cell in reimb){
-          let td = document.createElement("td");
-          td.innerText = reimb[cell];
-          row.appendChild(td);
-        }
-        tbody.appendChild(row);
-      }
-    }
     
     function getNewReimb(){
       let newReimbAmount = document.getElementById("reimbAmount").value;
