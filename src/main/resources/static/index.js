@@ -17,6 +17,7 @@ showReimsButton.className ="btn btn-primary";
 buttonRow.appendChild(showReimsButton);
 document.getElementById("buttonRow").style.display = 'block';
 
+
 async function login(){
     let user = {
       username:document.getElementById("username").value,
@@ -53,9 +54,14 @@ async function login(){
       }
     }
 
+
     function populateReimbTable(data){
 
       let tbody = document.getElementById("reimbBody");
+
+      while(tbody.rows.length > 0) {
+        tbody.deleteRow(0);
+      }
 
       for(let reimb of data){
         let row = document.createElement("tr");
@@ -84,8 +90,8 @@ async function login(){
       let newReimbResolved = Date.now();
       let newReimbDescription = document.getElementById("reimDescription").value;
       let newReimbAuthor = document.getElementById("reimbAuthor").value;
-      let newReimbResolver = document.getElementById("reimbResolver").value;
-      let newReimbStatus = document.getElementById("reimbStatus").value;
+      let newReimbResolverId = document.getElementById("reimbResolverId").value;
+      let newReimbStatusId = document.getElementById("reimbStatusId").value;
       let newReimbType = document.getElementById("reimbType").value;
       
     
@@ -95,8 +101,8 @@ async function login(){
         reimbResolved:newReimbResolved,
         reimbDescription:newReimbDescription,
         reimbAuthor:newReimbAuthor,
-        reimbResolver:newReimbResolver,
-        reimbStatusID:newReimbStatus,
+        reimbResolverId:newReimbResolverId,
+        reimbStatusID:newReimbStatusId,
         reimbTypeID:newReimbType
     
       }
