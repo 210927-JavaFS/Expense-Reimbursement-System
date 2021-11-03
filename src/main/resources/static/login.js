@@ -39,7 +39,7 @@ async function login(){
       }
     }
 
-    async function getReimbs(){
+    async function showReimbs(){
       let response = await fetch(URL+"ErsReimbursement", {credentials:"include"});
       if(response.status===200){
         let data = await response.json();
