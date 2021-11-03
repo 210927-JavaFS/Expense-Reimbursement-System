@@ -90,9 +90,9 @@ async function login(){
       let newReimbResolved = Date.now();
       let newReimbDescription = document.getElementById("reimbDescription").value;
       let newReimbAuthor = document.getElementById("reimbAuthor").value;
-      let newReimbResolverId = document.getElementById("reimbResolverId").value;
+      let newReimbResolver = document.getElementById("reimbResolver").value;
       let newReimbStatusId = document.getElementById("reimbStatusId").value;
-      let newReimbType = document.getElementById("reimbType").value;
+      let newReimbTypeId = document.getElementById("reimbTypeId").value;
       
     
       let reimb =  {
@@ -101,9 +101,9 @@ async function login(){
         reimbResolved:newReimbResolved,
         reimbDescription:newReimbDescription,
         reimbAuthor:newReimbAuthor,
-        reimbResolverId:newReimbResolverId,
+        reimbResolver:newReimbResolver,
         reimbStatusID:newReimbStatusId,
-        reimbTypeID:newReimbType
+        reimbTypeID:newReimbTypeId
     
       }
     
