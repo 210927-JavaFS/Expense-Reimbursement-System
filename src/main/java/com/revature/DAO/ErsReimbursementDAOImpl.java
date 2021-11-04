@@ -23,13 +23,9 @@ public class ErsReimbursementDAOImpl implements ErsReimbursementDAO{
 	@Override
 	public List<ErsReimbursement> getReimbursementByStatus(String status) {
 		Session session = HibernateUtil.getSession();
-		List<ErsReimbursementStatus> statusList = session.createQuery("FROM ErsReimbursementStatus WHERE status = '" + status + "'").list();
-		List<ErsReimbursement> ersReimbursement = new ArrayList<>();
-		for(ErsReimbursementStatus s : statusList ) {
-			ersReimbursement.add(this.getReimbursementById(s.getReimbStatusId()));
-		}
-		return ersReimbursement;
-		
+		List<ErsReimbursementStatus> statusId = session.createQuery("FROM ErsReimbursementStatus WHERE status = '" + status + "'").list();
+		List<ErsReimbursement> reimbList = session.createQuery("FROM ErsReimbursement WHERE reimbstatusid_reimbstatusid = '" + statusId.get(0).getReimbStatusId() + "'").list();
+		return reimbList;
 	}
 
 	@Override

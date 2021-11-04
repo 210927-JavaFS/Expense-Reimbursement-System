@@ -22,6 +22,9 @@ buttonRow.appendChild(showReimsButton);
 buttonRow.appendChild(getUserButton);
 document.getElementById("buttonRow").style.display = 'block';
 
+
+
+
 async function getUser(username){
   let response = await fetch(URL+"ErsUser/"+username, {credential:"include"});
   if(response.status === 200){
@@ -35,6 +38,7 @@ async function getUser(username){
 
 
 async function login(){
+  sessionStorage.clear();
     let user = {
       username:document.getElementById("username").value,
       password:document.getElementById("password").value
@@ -44,8 +48,10 @@ async function login(){
         body:JSON.stringify(user),
         credentials:"include" 
       });
-      console.log(response.status);
+
       if(response.status===200){
+        let data = await response.json();
+        seesionStorage.setItem("login",JSON.stringify(login));
         document.getElementsByClassName("login")[0].innerHTML = '';
 
       }
