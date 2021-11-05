@@ -25,8 +25,8 @@ public class DaoTest {
 		//System.out.println(ersUserDao.getUser("employee").toString());
 		//System.out.println(ersReimbursementDao.getAllReimbursements().toString());
 		//ersReimbursementDao.addReimbursement(new ErsReimbursement(
-				//100.0, Timestamp.valueOf(LocalDateTime.now()), Timestamp.valueOf(LocalDateTime.now()), "description", ersUserDao.getUser("username"), 
-				//ersUserDao.getUser("username"), new ErsReimbursementStatus(1,"Pending"), new ErsReimbursementType(1,"LODGING")));
+				//1000.0, Timestamp.valueOf(LocalDateTime.now()), null, "description", ersUserDao.getUser("employee"), 
+				//null, {1,"Pending"}, new ErsReimbursementType(1,"LODGING")));
 		
 	
 		//ersReimbursementDao.updateReimbursement(new ErsReimbursement(

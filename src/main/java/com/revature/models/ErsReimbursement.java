@@ -20,17 +20,17 @@ public class ErsReimbursement {
 	private Timestamp reimbSubmitted;
 	private Timestamp reimbResolved;
 	private String reimbDescription;
-	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	//@JoinColumn(name="reimbAuthor")
+	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)
+	//@JoinColumn(name="ersUserId")
 	private ErsUser reimbAuthor;
-	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	//@JoinColumn(name="reimbResolver")
+	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)
+	//@JoinColumn(name="ersUserId")
     private ErsUser reimbResolver;
-    @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-   // @JoinColumn(name="reimbStatusId")
+    @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)
+    //@JoinColumn(name="reimbStatusId")
     private ErsReimbursementStatus reimbStatusId;
-    @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-   // @JoinColumn(name="reimbTypeId")
+    @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)
+    //@JoinColumn(name="reimbTypeId")
     private ErsReimbursementType reimbTypeId;
 	
     public ErsReimbursement(int reimbId, double reimbAmount, Timestamp reimbSubmitted, Timestamp reimbResolved,

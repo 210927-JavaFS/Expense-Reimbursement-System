@@ -18,6 +18,7 @@ public class ErsUserDAOImpl implements ErsUserDAO{
 		Query query = session.createQuery("FROM ErsUser WHERE ersusername = '" +username+ "'");
 		return (ErsUser) query.getSingleResult();
 
+
 	}
 
 	@Override

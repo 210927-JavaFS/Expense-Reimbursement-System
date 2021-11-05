@@ -23,8 +23,8 @@ public class ErsUser {
     private String userLastName;
     @Column(unique = true)
     private String userEmail;
-    @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-    //@JoinColumn(name="ersUserRoleId")
+    @ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)
+   //@JoinColumn(name="ersUserRoleId")
     private ErsUserRole userRoleId;
     
 	public ErsUser(int ersUserId, String ersUsername, String ersPassword, String userFirstName, String userLastName,

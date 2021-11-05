@@ -5,25 +5,74 @@ let buttonRow = document.getElementById("buttonRow");
 let registerButton = document.getElementById("registerButton");
 let requestReimbButton = document.getElementById('requestReimbButton');
 let showReimsButton = document.createElement("button");
-let getUserButton = document.createElement("button");
+
 
 loginButton.onclick = login; 
 registerButton.onclick = addUser;
 requestReimbButton.onclick = addReimb;
 showReimsButton.onclick = showReimbs;
-getUserButton.onclick = getUser;
+
 
 showReimsButton.innerText = "View All Reimbursements";
 showReimsButton.className ="btn btn-primary";
 
-getUserButton.innerText = "Get User";
+
 
 buttonRow.appendChild(showReimsButton);
 buttonRow.appendChild(getUserButton);
 document.getElementById("buttonRow").style.display = 'block';
 
+function getNewUser(){
+  let newUsername = document.getElementById("newusername").value;
+  let newPassword = document.getElementById("newpassword").value;
+  let newFirstName = document.getElementById("firstName").value;
+  let newLastName = document.getElementById("lastName").value;
+  let newEmail = document.getElementById("email").value;
+  let newRole = document.getElementById("role").value;
 
+  switch(newRole){
+    case 'Employee':
+    newRole = {
+      ersUserRoleId:1,
+      Role:newRole
+    };
+    break;
 
+    case 'Manager':
+    newRole = {
+      ersUserRoleId:2,
+      Role:newRole
+    };
+    break;
+
+  }
+
+  let newUser =  {
+    ersUsername:newUsername,
+    ersPassword:newPassword,
+    userFirstName:newFirstname,
+    userLastName:newLastname,
+    userEmail:newEmail,
+    userRoleId:newRole,
+  }
+  console.log(newUser);
+  return newUser;
+}
+async function addUser(){
+  let user = getNewUser();
+    
+      let response = await fetch(URL+"ErsUser", {
+        method:'POST',
+        body:JSON.stringify(user),
+        credentials:"include"
+      });
+    
+      if(response.status===201){
+        console.log("User created successfully.");
+      }else{
+        console.log("Something went wrong creating your User.")
+      }
+}
 //get user
 async function getUser(username){
   let response = await fetch(URL+"ErsUser/"+username, {credentials:"include"});
