@@ -32,8 +32,8 @@ async function updateReimb(status){
   let oldReimb = await getByIdUpdate();
   let newReimbStatusId;
   let newReimbAmount = oldReimb.reimbAmount;
-  console.log(newReimbAmount);
-  let newReimbSubmitted = oldReimb.reimbDescription;
+  let newReimbDescription = oldReimb.reimbDescription;
+  let newReimbSubmitted = oldReimb.reimbSubmitted;
   let newReimbAuthor = oldReimb.reimbAuthor;
   let newReimbTypeId = oldReimb.reimbTypeId;
   
@@ -68,6 +68,7 @@ async function updateReimb(status){
 
 async function deny(){
   let reimb = await updateReimb("Denied");
+  let Id = document.getElementById("statusUpdate").value;
   let response = await fetch(URL+"ErsReimbursement/" + Id, {
     method:'PUT',
     body:JSON.stringify(reimb),
