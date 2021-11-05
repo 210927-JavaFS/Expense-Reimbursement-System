@@ -251,6 +251,7 @@ async function getUser(username){
 
 function logout(){
   location.reload();
+  sessionStorage.clear();
 }
 //login
 async function login(){
