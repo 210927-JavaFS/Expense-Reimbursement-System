@@ -73,7 +73,6 @@ public class ErsReimbursementController implements Controller {
 	
 	public Handler updateReimbursement = (ctx) -> {
 		if(ctx.req.getSession(false) != null) {
-				System.out.println("update");
 				ErsReimbursement reimbursement= ctx.bodyAsClass(ErsReimbursement.class);
 				if(ersReimbursementService.updateReimbursement(reimbursement)) {
 					ctx.status(200);

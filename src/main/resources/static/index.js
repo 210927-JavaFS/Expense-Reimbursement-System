@@ -29,6 +29,7 @@ buttonRow.appendChild(showReimsButton);
 document.getElementById("buttonRow").style.display = 'block';
 
 async function updateReimb(status){
+  let Id = document.getElementById("statusUpdate").value;
   let oldReimb = await getByIdUpdate();
   let newReimbStatusId;
   let newReimbAmount = oldReimb.reimbAmount;
@@ -54,6 +55,7 @@ async function updateReimb(status){
   }
 
   let reimb = {
+    reimbId:Id,
     reimbAmount:newReimbAmount,
     reimbSubmitted:newReimbSubmitted,
     reimbResolved:Date.now(),
