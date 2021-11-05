@@ -13,14 +13,14 @@ public class ErsReimbursementController implements Controller {
 	private ErsReimbursementService ersReimbursementService = new ErsReimbursementService();
 
 	public Handler getAllReimbursements = (ctx) -> {
-		//if (ctx.req.getSession(false) != null) {
+		if (ctx.req.getSession(false) != null) {
 			List<ErsReimbursement> list = ersReimbursementService.getAllReimbursements();
 
 			ctx.json(list);
 			ctx.status(200);
-		//} else {
-		//	ctx.status(401);
-		//}
+		} else {
+			ctx.status(401);
+		}
 	};
 
 	public Handler getReimbursementByStatus = (ctx) -> {

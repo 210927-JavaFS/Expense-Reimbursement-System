@@ -53,14 +53,14 @@ async function login(){
       if(response.status===200){
         let data = await getUser(user.username);
         sessionStorage.setItem("login",JSON.stringify(login));
-        document.getElementsByClassName("login").innerHTML = '';
+      
 
       }
       else{
         let para = document.createElement("p");
         para.setAttribute("style", "color:red")
         para.innerText = "LOGIN FAILED"
-        document.getElementById("login").appendChild(para);
+        document.getElementById("formClass").appendChild(para);
       }
     }
 
