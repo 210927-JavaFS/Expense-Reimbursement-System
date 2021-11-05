@@ -114,7 +114,7 @@ async function getByIdUpdate(){
   let response = await fetch(URL+"ErsReimbursement/"+Id, {credentials:"include"});
   if(response.status === 200){
     let data = await response.json();
-    console.log(data);
+    return data;
     
   }
   else{
