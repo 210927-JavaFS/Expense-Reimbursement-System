@@ -29,10 +29,10 @@ public class ErsReimbursementDAOImpl implements ErsReimbursementDAO{
 	}
 
 	@Override
-	public ErsReimbursement getReimbursementById(int id) {
+	public List<ErsReimbursement> getReimbursementById(int id) {
 		Session session = HibernateUtil.getSession();
 		List<ErsReimbursement> ersReimbursement = session.createQuery("FROM ErsReimbursement WHERE reimbid = '" +id+ "'").list();
-		return ersReimbursement.get(0);
+		return ersReimbursement;
 	}
 
 	@Override

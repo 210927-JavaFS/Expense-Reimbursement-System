@@ -43,7 +43,7 @@ public class ErsReimbursementController implements Controller {
 			try {
 				String idString = ctx.pathParam("reimbId");
 				int reimbId = Integer.parseInt(idString);
-				ErsReimbursement ersReimbursement= ersReimbursementService.getReimbursementById(reimbId);
+				List<ErsReimbursement> ersReimbursement= ersReimbursementService.getReimbursementById(reimbId);
 				ctx.json(ersReimbursement);
 				ctx.status(200);
 			}
@@ -93,7 +93,7 @@ public class ErsReimbursementController implements Controller {
 				String idString = ctx.pathParam("reimbId");
 				try {
 					int reimbId = Integer.parseInt(idString);
-					ErsReimbursement reimbursement = ersReimbursementService.getReimbursementById(reimbId);
+					ErsReimbursement reimbursement = ersReimbursementService.getReimbursementById(reimbId).get(0);
 					ersReimbursementService.deleteReimbursement(reimbursement);
 					ctx.status(201);
 				}

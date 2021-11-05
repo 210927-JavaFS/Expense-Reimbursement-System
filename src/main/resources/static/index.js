@@ -8,6 +8,8 @@ let requestReimbButton = document.getElementById('requestReimbButton');
 let showReimsButton = document.createElement("button");
 let getByStatusButton = document.getElementById("reimbByStatus");
 let getByIdButton = document.getElementById("reimbById");
+let approveButton = document.getElementById("approve");
+let denyButton = document.getElementById("deny");
 
 loginButton.onclick = login; 
 logoutButton.onclick = logout;
@@ -16,14 +18,80 @@ requestReimbButton.onclick = addReimb;
 showReimsButton.onclick = showReimbs;
 getByStatusButton.onclick = getByStatus;
 getByIdButton.onclick = getById;
+approveButton.onclick = approve;
+denyButton.onclick = deny;
+
 
 showReimsButton.innerText = "View All Reimbursements";
 showReimsButton.className ="btn btn-primary";
 
-
-
 buttonRow.appendChild(showReimsButton);
 document.getElementById("buttonRow").style.display = 'block';
+
+async function updateReimb(status){
+  let oldReimb = await getByIdUpdate();
+  let newReimbStatusId;
+  switch(status){
+    case 'Approved':
+    newReimbStatusId = {
+      reimbStatusId:2,
+      status:"Approved"
+    };
+    break;
+
+    case 'Denied':
+    newReimbStatusId = {
+      reimbStatusId:3,
+      status:"Denied"
+    };
+    break;
+  }
+  let reimb = {
+    reimbAmount:oldReimb.reimbAmount,
+    reimbSubmitted:oldReimb.reimbSubmitted,
+    reimbResolved:Date.now(),
+    reimbDescription:oldReimb.reimbDescription,
+    reimbAuthor:oldReimb.reimbAuthor,
+    reimbResolver:JSON.parse(sessionStorage.getItem("login")),
+    reimbStatusId:newReimbStatusId,
+    reimbTypeId:oldReimb.reimbTypeId
+  };
+  return reimb;
+}
+
+async function deny(){
+  let reimb = await updateReimb("Denied");
+  let response = await fetch(URL+"ErsReimbuirsement/", {
+    method:'PUT',
+    body:JSON.stringify(reimb),
+    credentials:"include"
+  });
+
+  if (response.status===200){
+    console.log("Denied")
+  }
+  else{
+    console.log("Failed")
+  }
+}
+
+async function approve(){
+  let reimb = await updateReimb("Approved");
+  let response = await fetch(URL+"ErsReimbuirsement/", {
+    method:'PUT',
+    body:JSON.stringify(reimb),
+    credentials:"include"
+  });
+
+  if (response.status===200){
+    console.log("Approved")
+  }
+  else{
+    console.log("Failed")
+  }
+
+}
+
 
 async function getById(){
   let Id = document.getElementById("Id").value;
@@ -35,7 +103,21 @@ async function getById(){
     
   }
   else{
-    console.log("Failed to get reimbs.")
+    console.log("Failed to get reimb.")
+  }
+}
+
+async function getByIdUpdate(){
+  let Id = document.getElementById("statusUpdate").value;
+  let response = await fetch(URL+"ErsReimbursement/"+Id, {credentials:"include"});
+  if(response.status === 200){
+    let data = await response.json();
+    console.log(data);
+    populateReimbTable(data);
+    
+  }
+  else{
+    console.log("Failed to get reimb.")
   }
 }
 

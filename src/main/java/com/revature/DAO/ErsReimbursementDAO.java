@@ -8,7 +8,7 @@ public interface ErsReimbursementDAO {
 
 	List<ErsReimbursement> getAllReimbursements();
 	List<ErsReimbursement> getReimbursementByStatus(String status);
-	ErsReimbursement getReimbursementById(int id);
+	List<ErsReimbursement> getReimbursementById(int id);
 	boolean addReimbursement(ErsReimbursement reimbursement);
 	boolean updateReimbursement(ErsReimbursement reimbursement);
 	boolean deleteReimbursement(ErsReimbursement reimbursement);
