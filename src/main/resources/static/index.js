@@ -113,7 +113,7 @@ async function login(){
       let newReimbSubmitted = Date.now();
       let newReimbResolved = null;
       let newReimbDescription = document.getElementById("reimbDescription").value;
-      let newReimbAuthor = JSON.stringify(sessionStorage.getItem("login"));
+      let newReimbAuthor = getUser(sessionStorage.getItem("login").ersUsername);
       let newReimbResolver = null;
       let newReimbStatusId;
       let newReimbTypeId = document.getElementById("reimbTypeId").value;
