@@ -19,7 +19,6 @@ showReimsButton.className ="btn btn-primary";
 
 
 buttonRow.appendChild(showReimsButton);
-buttonRow.appendChild(getUserButton);
 document.getElementById("buttonRow").style.display = 'block';
 
 function getNewUser(){
@@ -50,8 +49,8 @@ function getNewUser(){
   let newUser =  {
     ersUsername:newUsername,
     ersPassword:newPassword,
-    userFirstName:newFirstname,
-    userLastName:newLastname,
+    userFirstName:newFirstName,
+    userLastName:newLastName,
     userEmail:newEmail,
     userRoleId:newRole,
   }
