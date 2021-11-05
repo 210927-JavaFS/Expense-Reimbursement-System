@@ -33,14 +33,14 @@ function getNewUser(){
     case 'Employee':
     newRole = {
       ersUserRoleId:1,
-      Role:newRole
+      role:newRole
     };
     break;
 
     case 'Manager':
     newRole = {
       ersUserRoleId:2,
-      Role:newRole
+      role:newRole
     };
     break;
 
