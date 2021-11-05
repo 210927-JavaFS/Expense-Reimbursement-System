@@ -42,7 +42,8 @@ public class ErsReimbursementController implements Controller {
 		if (ctx.req.getSession(false) != null) {
 			try {
 				String idString = ctx.pathParam("userId");
-				List<ErsReimbursement> list = ersReimbursementService.getMyReimbursement(idString);
+				int userId = Integer.parseInt(idString);
+				List<ErsReimbursement> list = ersReimbursementService.getMyReimbursement(userId);
 				ctx.json(list);
 				ctx.status(200);
 			}
