@@ -29,7 +29,7 @@ buttonRow.appendChild(showReimsButton);
 document.getElementById("buttonRow").style.display = 'block';
 
 async function updateReimb(status){
-  let oldReimb = await getByIdUpdate();
+  let oldReimb = getByIdUpdate();
   console.log(oldReimb);
   let newReimbStatusId;
   switch(status){
