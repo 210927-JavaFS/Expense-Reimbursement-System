@@ -35,7 +35,7 @@ public class DaoTest {
 		//System.out.println(ersReimbursementDao.getReimbursementById(1));
 		//System.out.println(ersReimbursementDao.getReimbursementByStatus("Pending").toString());
 		//System.out.println(ersUserService.login(new UserDTO("employee","passing")));
-		System.out.println(ersReimbursementDao.getMyReimbursement(1));
+		//System.out.println(ersReimbursementDao.getMyReimbursement(1));
 	}
 	
 	
