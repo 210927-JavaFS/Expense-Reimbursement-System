@@ -31,6 +31,7 @@ async function getById(){
   if(response.status === 200){
     let data = await response.json();
     populateReimbTable(data);
+    console.log(data);
   }
   else{
     console.log("Failed to get reimbs.")
