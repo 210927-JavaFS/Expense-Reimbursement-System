@@ -29,10 +29,13 @@ buttonRow.appendChild(showReimsButton);
 document.getElementById("buttonRow").style.display = 'block';
 
 async function updateReimb(status){
-  let oldReimb = getByIdUpdate();
+  let oldReimb = await getByIdUpdate();
   let newReimbStatusId;
-  let newReimb = oldReimb.reimbAmount;
-  console.log(newReimb);
+  let newReimbAmount = oldReimb.reimbAmount;
+  console.log(newReimbAmount);
+  let newReimbSubmitted = oldReimb.reimbDescription;
+  let newReimbAuthor = oldReimb.reimbAuthor;
+  let newReimbTypeId = oldReimb.reimbTypeId;
   
   switch(status){
     case 'Approved':
@@ -51,14 +54,14 @@ async function updateReimb(status){
   }
 
   let reimb = {
-    reimbAmount:oldReimb.reimbAmount,
-    reimbSubmitted:oldReimb.reimbSubmitted,
+    reimbAmount:newReimbAmount,
+    reimbSubmitted:newReimbSubmitted,
     reimbResolved:Date.now(),
-    reimbDescription:oldReimb.reimbDescription,
-    reimbAuthor:oldReimb.reimbAuthor,
+    reimbDescription:newReimbDescription,
+    reimbAuthor:newReimbAuthor,
     reimbResolver:JSON.parse(sessionStorage.getItem("login")),
     reimbStatusId:newReimbStatusId,
-    reimbTypeId:oldReimb.reimbTypeId
+    reimbTypeId:newReimbTypeId
   };
   return reimb;
 }
