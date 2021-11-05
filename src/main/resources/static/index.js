@@ -30,8 +30,9 @@ async function getById(){
   let response = await fetch(URL+"ErsReimbursement/"+Id, {credentials:"include"});
   if(response.status === 200){
     let data = await response.json();
-    populateReimbTable(data);
     console.log(data);
+    populateReimbTable(data);
+    
   }
   else{
     console.log("Failed to get reimbs.")
