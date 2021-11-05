@@ -85,23 +85,33 @@ async function updateReimb(status){
 }
 
 async function deny(){
-  let reimb = await updateReimb("Denied");
-  let Id = document.getElementById("statusUpdate").value;
-  let response = await fetch(URL+"ErsReimbursement/" + Id, {
-    method:'PUT',
-    body:JSON.stringify(reimb),
-    credentials:"include"
-  });
-
-  if (response.status===200){
-    console.log("Denied")
+  let login = JSON.parse(sessionStorage.getItem("login"));
+  console.log(login.userRoleId.role);
+  if (login.userRoleId.role==="Manager"){
+    let reimb = await updateReimb("Denied");
+    let Id = document.getElementById("statusUpdate").value;
+    let response = await fetch(URL+"ErsReimbursement/" + Id, {
+      method:'PUT',
+      body:JSON.stringify(reimb),
+      credentials:"include"
+    });
+  
+    if (response.status===200){
+      console.log("Denied")
+    }
+    else{
+      console.log("Failed")
+    }
   }
   else{
-    console.log("Failed")
+    console.log("You cant do this");
   }
+
 }
 
 async function approve(){
+  let login = JSON.parse(sessionStorage.getItem("login"));
+
   let reimb = await updateReimb("Approved");
   console.log(reimb);
   let Id = document.getElementById("statusUpdate").value;
