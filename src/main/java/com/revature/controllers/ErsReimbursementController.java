@@ -55,7 +55,7 @@ public class ErsReimbursementController implements Controller {
 	};
 	
 	public Handler addReimbursement = (ctx) -> {
-		//if(ctx.req.getSession(false) != null) {
+		if(ctx.req.getSession(false) != null) {
 
 				ErsReimbursement reimbursement= ctx.bodyAsClass(ErsReimbursement.class);
 				if(ersReimbursementService.addReimbursement(reimbursement)) {
@@ -65,27 +65,27 @@ public class ErsReimbursementController implements Controller {
 					ctx.status(400);
 				}
 			
-		//}
-		//else {
-			//ctx.status(401);
-		//}
+		}
+		else {
+			ctx.status(401);
+		}
 	};
 	
 	public Handler updateReimbursement = (ctx) -> {
-		//if(ctx.req.getSession(false) != null) {
-
+		if(ctx.req.getSession(false) != null) {
+				System.out.println("update");
 				ErsReimbursement reimbursement= ctx.bodyAsClass(ErsReimbursement.class);
-				if(ersReimbursementService.addReimbursement(reimbursement)) {
+				if(ersReimbursementService.updateReimbursement(reimbursement)) {
 					ctx.status(200);
 				}
 				else {
 					ctx.status(400);
 				}
 			
-		//}
-		//else {
-		//	ctx.status(401);
-		//}
+		}
+		else {
+			ctx.status(401);
+		}
 	};
 	
 	public Handler deleteReimbursement = (ctx) -> {
