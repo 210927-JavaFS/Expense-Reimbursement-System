@@ -43,6 +43,7 @@ async function login(){
       username:document.getElementById("username").value,
       password:document.getElementById("password").value
     }
+    console.log(user);
     let response = await fetch(URL+"Login", {
         method:"POST",
         body:JSON.stringify(user),
