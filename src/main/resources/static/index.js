@@ -86,7 +86,6 @@ async function updateReimb(status){
 
 async function deny(){
   let login = JSON.parse(sessionStorage.getItem("login"));
-  console.log(login.userRoleId.role);
   if (login.userRoleId.role==="Manager"){
     let reimb = await updateReimb("Denied");
     let Id = document.getElementById("statusUpdate").value;
@@ -111,7 +110,7 @@ async function deny(){
 
 async function approve(){
   let login = JSON.parse(sessionStorage.getItem("login"));
-
+  if (login.userRoleId.role==="Manager"){
   let reimb = await updateReimb("Approved");
   console.log(reimb);
   let Id = document.getElementById("statusUpdate").value;
@@ -127,11 +126,16 @@ async function approve(){
   else{
     console.log("Failed")
   }
-
+  }
+  else{
+    console.log("You cant do this");
+  }
 }
 
 
 async function getById(){
+  let login = JSON.parse(sessionStorage.getItem("login"));
+  if (login.userRoleId.role==="Manager"){
   let Id = document.getElementById("Id").value;
   let response = await fetch(URL+"ErsReimbursement/"+Id, {credentials:"include"});
   if(response.status === 200){
@@ -144,8 +148,13 @@ async function getById(){
     console.log("Failed to get reimb.")
   }
 }
+else{
+  console.log("You cant do this");
+}
+}
 
 async function getByIdUpdate(){
+  
   let Id = document.getElementById("statusUpdate").value;
   let response = await fetch(URL+"ErsReimbursement/"+Id, {credentials:"include"});
   if(response.status === 200){
@@ -159,6 +168,8 @@ async function getByIdUpdate(){
 }
 
 async function getByStatus(){
+  let login = JSON.parse(sessionStorage.getItem("login"));
+  if (login.userRoleId.role==="Manager"){
   let statusId = document.getElementById("status").value;
   let response = await fetch(URL+"ErsReimbursement/status/"+statusId, {credentials:"include"});
   if(response.status === 200){
@@ -168,7 +179,10 @@ async function getByStatus(){
   else{
     console.log("Failed to get reimbs.")
   }
-
+  }
+  else{
+    console.log("You cant do this");
+  }
 }
 
 
@@ -269,6 +283,8 @@ async function login(){
     //view all reimbs
 
     async function showReimbs(){
+      let login = JSON.parse(sessionStorage.getItem("login"));
+      if (login.userRoleId.role==="Manager"){
       let response = await fetch(URL+"ErsReimbursement", {credentials:"include"});
       if(response.status===200){
         let data = await response.json();
@@ -277,6 +293,10 @@ async function login(){
       }else{
         console.log("Reimbs not available.");
       }
+    }
+    else{
+      console.log("You cant do this");
+    }
     }
 
 
