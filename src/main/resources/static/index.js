@@ -24,7 +24,7 @@ document.getElementById("buttonRow").style.display = 'block';
 
 
 
-
+//get user
 async function getUser(username){
   let response = await fetch(URL+"ErsUser/"+username, {credentials:"include"});
   if(response.status === 200){
@@ -36,7 +36,7 @@ async function getUser(username){
   }
 }
 
-
+//login
 async function login(){
   sessionStorage.clear();
     let user = {
@@ -52,7 +52,7 @@ async function login(){
       console.log(response.status);
       if(response.status===200){
         let data = await getUser(user.username);
-        sessionStorage.setItem("login",JSON.stringify(login));
+        sessionStorage.setItem("login",JSON.stringify(data));
       
 
       }
@@ -63,6 +63,8 @@ async function login(){
         document.getElementById("formClass").appendChild(para);
       }
     }
+
+    //view all reimbs
 
     async function showReimbs(){
       let response = await fetch(URL+"ErsReimbursement", {credentials:"include"});
@@ -109,29 +111,52 @@ async function login(){
     function getNewReimb(){
       let newReimbAmount = document.getElementById("reimbAmount").value;
       let newReimbSubmitted = Date.now();
-      let newReimbResolved = Date.now();
+      let newReimbResolved = null;
       let newReimbDescription = document.getElementById("reimbDescription").value;
-      let newReimbAuthor = document.getElementById("reimbAuthor").value;
-      let newReimbResolver = document.getElementById("reimbResolver").value;
-      let newReimbStatusId = document.getElementById("reimbStatusId").value;
+      let newReimbAuthor = sessionStorage.getItem("login");
+      let newReimbResolver = null;
+      let newReimbStatusId;
       let newReimbTypeId = document.getElementById("reimbTypeId").value;
       
       newReimbStatusId = {
-        reimbStatusId:5,
-        status:newReimbStatusId
+        reimbStatusId:1,
+        status:"Pending"
       }
-      newReimbTypeId = {
-        reimbTypeId:5,
-        type:newReimbTypeId
+      switch(newReimbTypeId){
+        case 'LODGING':
+        newReimbTypeId = {
+          reimbTypeId:1,
+          type:newReimbTypeId
+        }
+
+        case 'TRAVEL':
+        newReimbTypeId = {
+          reimbTypeId:2,
+          type:newReimbTypeId
+        }
+
+        case 'FOOD':
+        newReimbTypeId = {
+          reimbTypeId:3,
+          type:newReimbTypeId
+        }
+
+        case 'OTHER':
+        newReimbTypeId = {
+          reimbTypeId:4,
+          type:newReimbTypeId
+        }
       }
+    
+     
 
       let reimb =  {
         reimbAmount:parseFloat(newReimbAmount),
         reimbSubmitted:newReimbSubmitted,
         reimbResolved:newReimbResolved,
         reimbDescription:newReimbDescription,
-        reimbAuthor:getUser(newReimbAuthor),
-        reimbResolver:getUser(newReimbResolver),
+        reimbAuthor:newReimbAuthor,
+        reimbResolver:newReimbResolver,
         reimbStatusId:newReimbStatusId,
         reimbTypeId:newReimbTypeId
     
