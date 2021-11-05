@@ -30,6 +30,7 @@ document.getElementById("buttonRow").style.display = 'block';
 
 async function updateReimb(status){
   let oldReimb = await getByIdUpdate();
+  console.log(oldReimb);
   let newReimbStatusId;
   switch(status){
     case 'Approved':
@@ -46,6 +47,7 @@ async function updateReimb(status){
     };
     break;
   }
+
   let reimb = {
     reimbAmount:oldReimb.reimbAmount,
     reimbSubmitted:oldReimb.reimbSubmitted,
@@ -113,7 +115,6 @@ async function getByIdUpdate(){
   if(response.status === 200){
     let data = await response.json();
     console.log(data);
-    populateReimbTable(data);
     
   }
   else{
