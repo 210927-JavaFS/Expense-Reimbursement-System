@@ -25,14 +25,14 @@ buttonRow.appendChild(showReimsButton);
 document.getElementById("buttonRow").style.display = 'block';
 
 async function getByStatus(){
-  let status = document.getElementById("status");
-  let response = await fetch(URL+"ErsReimbursement/status/"+status, {credentials:"include"});
+  let statusId = document.getElementById("status").value;
+  let response = await fetch(URL+"ErsReimbursement/status/"+statusId, {credentials:"include"});
   if(response.status === 200){
     let data = await response.json();
-    return data;
+    populateReimbTable(data);
   }
   else{
-    console.log("Failed to get user.")
+    console.log("Failed to get reimbs.")
   }
 
 }
@@ -249,6 +249,7 @@ async function login(){
       });
     
       if(response.status===201){
+
         console.log("Reimb created successfully.");
       }else{
         console.log("Something went wrong creating your Reimb.")
