@@ -1,17 +1,20 @@
 const URL = "http://localhost:8081/";
 
 let loginButton = document.getElementById('loginButton');
+let logoutButton = document.getElementById('logoutButton');
 let buttonRow = document.getElementById("buttonRow");
 let registerButton = document.getElementById("registerButton");
 let requestReimbButton = document.getElementById('requestReimbButton');
 let showReimsButton = document.createElement("button");
+let getByStatusButton = document.getElementById("reimbByStatus");
 
 
 loginButton.onclick = login; 
+logoutButton.onclick = logout;
 registerButton.onclick = addUser;
 requestReimbButton.onclick = addReimb;
 showReimsButton.onclick = showReimbs;
-
+getByStatusButton.onclick = getByStatus;
 
 showReimsButton.innerText = "View All Reimbursements";
 showReimsButton.className ="btn btn-primary";
@@ -20,6 +23,20 @@ showReimsButton.className ="btn btn-primary";
 
 buttonRow.appendChild(showReimsButton);
 document.getElementById("buttonRow").style.display = 'block';
+
+async function getByStatus(){
+  let status = document.getElementById("status");
+  let response = await fetch(URL+"ErsReimbursement/status/"+status, {credentials:"include"});
+  if(response.status === 200){
+    let data = await response.json();
+    return data;
+  }
+  else{
+    console.log("Failed to get user.")
+  }
+
+}
+
 
 function getNewUser(){
   let newUsername = document.getElementById("newusername").value;
@@ -84,6 +101,9 @@ async function getUser(username){
   }
 }
 
+function logout(){
+  location.reload();
+}
 //login
 async function login(){
   sessionStorage.clear();
