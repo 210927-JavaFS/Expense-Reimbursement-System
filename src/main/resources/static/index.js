@@ -30,8 +30,10 @@ document.getElementById("buttonRow").style.display = 'block';
 
 async function updateReimb(status){
   let oldReimb = getByIdUpdate();
-  console.log(oldReimb);
   let newReimbStatusId;
+  let newReimb = oldReimb.reimbAmount;
+  console.log(newReimb);
+  
   switch(status){
     case 'Approved':
     newReimbStatusId = {
