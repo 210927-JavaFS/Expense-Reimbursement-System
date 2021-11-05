@@ -113,11 +113,13 @@ async function login(){
       let newReimbSubmitted = Date.now();
       let newReimbResolved = null;
       let newReimbDescription = document.getElementById("reimbDescription").value;
-      let newReimbAuthor = sessionStorage.getItem("login");
+      let newReimbAuthor = JSON.stringify(sessionStorage.getItem("login"));
       let newReimbResolver = null;
       let newReimbStatusId;
       let newReimbTypeId = document.getElementById("reimbTypeId").value;
       
+
+
       newReimbStatusId = {
         reimbStatusId:1,
         status:"Pending"
@@ -127,25 +129,29 @@ async function login(){
         newReimbTypeId = {
           reimbTypeId:1,
           type:newReimbTypeId
-        }
+        };
+        break;
 
         case 'TRAVEL':
         newReimbTypeId = {
           reimbTypeId:2,
           type:newReimbTypeId
-        }
+        };
+        break;
 
         case 'FOOD':
         newReimbTypeId = {
           reimbTypeId:3,
           type:newReimbTypeId
-        }
+        };
+        break;
 
         case 'OTHER':
         newReimbTypeId = {
           reimbTypeId:4,
           type:newReimbTypeId
-        }
+        };
+        break;
       }
     
      
