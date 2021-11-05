@@ -5,9 +5,10 @@ let logoutButton = document.getElementById('logoutButton');
 let buttonRow = document.getElementById("buttonRow");
 let registerButton = document.getElementById("registerButton");
 let requestReimbButton = document.getElementById('requestReimbButton');
-let showReimsButton = document.createElement("button");
+let showReimbsButton = document.createElement("button");
 let getByStatusButton = document.getElementById("reimbByStatus");
 let getByIdButton = document.getElementById("reimbById");
+let getMyReimbsButton = document.getElementById("myReimbs");
 let approveButton = document.getElementById("approve");
 let denyButton = document.getElementById("deny");
 
@@ -15,18 +16,32 @@ loginButton.onclick = login;
 logoutButton.onclick = logout;
 registerButton.onclick = addUser;
 requestReimbButton.onclick = addReimb;
-showReimsButton.onclick = showReimbs;
+showReimbsButton.onclick = showReimbs;
 getByStatusButton.onclick = getByStatus;
 getByIdButton.onclick = getById;
+getMyReimbsButton.onclick = getMyReimbs;
 approveButton.onclick = approve;
 denyButton.onclick = deny;
 
 
-showReimsButton.innerText = "View All Reimbursements";
-showReimsButton.className ="btn btn-primary";
+showReimbsButton.innerText = "View All Reimbursements";
+showReimbsButton.className ="btn btn-primary";
 
-buttonRow.appendChild(showReimsButton);
+buttonRow.appendChild(showReimbsButton);
 document.getElementById("buttonRow").style.display = 'block';
+
+async function getMyReimbs(){
+  let login = JSON.parse(sessionStorage.getItem("login"));
+  let response = await fetch(URL + "ErsReimbursement/" + login.ersUserId, {credentials:"include"});
+
+  if(response.status === 200){
+    let data = await response.json();
+    populateReimbTable(data);
+  }
+  else{
+    console.log("Could not find your tickets");
+  }
+}
 
 async function updateReimb(status){
   let Id = document.getElementById("statusUpdate").value;

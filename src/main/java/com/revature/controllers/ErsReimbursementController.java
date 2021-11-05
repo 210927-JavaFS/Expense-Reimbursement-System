@@ -24,7 +24,7 @@ public class ErsReimbursementController implements Controller {
 	};
 
 	public Handler getReimbursementByStatus = (ctx) -> {
-		//if (ctx.req.getSession(false) != null) {
+		if (ctx.req.getSession(false) != null) {
 			try {
 				String idString = ctx.pathParam("statusId");
 				List<ErsReimbursement> list = ersReimbursementService.getReimbursementByStatus(idString);
@@ -35,11 +35,26 @@ public class ErsReimbursementController implements Controller {
 				e.printStackTrace();
 				ctx.status(406);
 			}
-		//}
+		}
+	};
+	
+	public Handler getMyReimbursement = (ctx) -> {
+		if (ctx.req.getSession(false) != null) {
+			try {
+				String idString = ctx.pathParam("userId");
+				List<ErsReimbursement> list = ersReimbursementService.getMyReimbursement(idString);
+				ctx.json(list);
+				ctx.status(200);
+			}
+			catch(NumberFormatException e){
+				e.printStackTrace();
+				ctx.status(406);
+			}
+		}
 	};
 	
 	public Handler getReimbursementById = (ctx) -> {
-		//if(ctx.req.getSession(false) != null) {
+		if(ctx.req.getSession(false) != null) {
 			try {
 				String idString = ctx.pathParam("reimbId");
 				int reimbId = Integer.parseInt(idString);
@@ -51,7 +66,7 @@ public class ErsReimbursementController implements Controller {
 				e.printStackTrace();
 				ctx.status(406);
 			}
-		//}
+		}
 	};
 	
 	public Handler addReimbursement = (ctx) -> {
@@ -113,6 +128,7 @@ public class ErsReimbursementController implements Controller {
 		app.get("/ErsReimbursement",this.getAllReimbursements);
 		app.get("/ErsReimbursement/status/:statusId",this.getReimbursementByStatus);
 		app.get("/ErsReimbursement/:reimbId",this.getReimbursementById);
+		app.get("/ErsReimbursement/:userId",this.getMyReimbursement);
 		app.post("/ErsReimbursement", this.addReimbursement);
 		app.put("/ErsReimbursement/:reimbId", this.updateReimbursement);
 		app.delete("ErsReimbursement/:reimbId", this.deleteReimbursement);

@@ -22,6 +22,10 @@ public class ErsReimbursementService {
 		return ersReimbursementDAO.getReimbursementById(id);
 	}
 	
+	public List<ErsReimbursement> getMyReimbursement(String username){
+		return ersReimbursementDAO.getMyReimbursement(username);
+	}
+	
 	public boolean addReimbursement(ErsReimbursement reimbursement) {
 		return ersReimbursementDAO.addReimbursement(reimbursement);
 	}

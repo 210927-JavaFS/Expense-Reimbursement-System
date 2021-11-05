@@ -83,4 +83,12 @@ public class ErsReimbursementDAOImpl implements ErsReimbursementDAO{
 		}
 	}
 
+	@Override
+	public List<ErsReimbursement> getMyReimbursement(String username) {
+		Session session = HibernateUtil.getSession();
+		List<ErsUser> user = session.createQuery("FROM ErsUser WHERE username = '" + username + "'").list();
+		List<ErsReimbursement> reimbList = session.createQuery("FROM ErsReimbursement WHERE reimbauthor_ersuserid = '" + user.get(0).getErsUserId() + "'").list();
+		return reimbList;
+	}
+
 }
