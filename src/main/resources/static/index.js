@@ -63,7 +63,7 @@ async function updateReimb(status){
 
 async function deny(){
   let reimb = await updateReimb("Denied");
-  let response = await fetch(URL+"ErsReimbuirsement/", {
+  let response = await fetch(URL+"ErsReimbuirsement/" + Id, {
     method:'PUT',
     body:JSON.stringify(reimb),
     credentials:"include"
@@ -79,7 +79,9 @@ async function deny(){
 
 async function approve(){
   let reimb = await updateReimb("Approved");
-  let response = await fetch(URL+"ErsReimbuirsement/", {
+  console.log(reimb);
+  let Id = document.getElementById("statusUpdate").value;
+  let response = await fetch(URL+"ErsReimbuirsement/" + Id, {
     method:'PUT',
     body:JSON.stringify(reimb),
     credentials:"include"
