@@ -32,6 +32,7 @@ document.getElementById("buttonRow").style.display = 'block';
 
 async function getMyReimbs(){
   let login = JSON.parse(sessionStorage.getItem("login"));
+  console.log(login.ersUserId);
   let response = await fetch(URL + "ErsReimbursement/" + login.ersUserId, {credentials:"include"});
 
   if(response.status === 200){
