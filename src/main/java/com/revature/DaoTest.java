@@ -12,11 +12,13 @@ import com.revature.models.ErsReimbursementStatus;
 import com.revature.models.ErsReimbursementType;
 import com.revature.models.ErsUser;
 import com.revature.models.ErsUserRole;
+import com.revature.models.UserDTO;
+import com.revature.service.ErsUserService;
 
 public class DaoTest {
 	public static ErsReimbursementDAO ersReimbursementDao= new ErsReimbursementDAOImpl();
 	public static ErsUserDAO ersUserDao = new ErsUserDAOImpl();
-	
+	public static ErsUserService ersUserService = new ErsUserService();
 	public static void main(String[] args) {
 		
 		//ersUserDao.addUser(new ErsUser("username", "pass", "a","a","a@a",new ErsUserRole(1,"Employee")));
@@ -32,6 +34,7 @@ public class DaoTest {
 				//ersUserDao.getUser("username"), new ErsReimbursementStatus(1,"Pending"), new ErsReimbursementType(1,"LODGING")));
 		//System.out.println(ersReimbursementDao.getReimbursementById(1));
 		//System.out.println(ersReimbursementDao.getReimbursementByStatus("Pending").toString());
+		//System.out.println(ersUserService.login(new UserDTO("employee","passing")));
 	}
 	
 	

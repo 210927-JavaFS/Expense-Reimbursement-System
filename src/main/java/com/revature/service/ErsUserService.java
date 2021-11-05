@@ -23,8 +23,7 @@ public class ErsUserService {
 	
 	public static boolean login(UserDTO userDto) {
 		ErsUser user = ersUserDAO.getUser(userDto.username);
-		
-		if(user!=null && (userDto.password==user.getErsPassword())) {
+		if(user!=null && (userDto.password.equals(user.getErsPassword()))) {
 			return true;
 		}
 		

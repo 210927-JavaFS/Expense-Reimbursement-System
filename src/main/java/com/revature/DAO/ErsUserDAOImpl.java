@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import com.revature.models.ErsUser;
 import com.revature.utils.HibernateUtil;
@@ -14,8 +15,8 @@ public class ErsUserDAOImpl implements ErsUserDAO{
 	@Override
 	public ErsUser getUser(String username) {
 		Session session = HibernateUtil.getSession();
-		List<ErsUser> ersUser = session.createQuery("FROM ErsUser WHERE ersusername = '" +username+ "'").list();
-		return ersUser.get(0);
+		Query query = session.createQuery("FROM ErsUser WHERE ersusername = '" +username+ "'");
+		return (ErsUser) query.getSingleResult();
 
 	}
 

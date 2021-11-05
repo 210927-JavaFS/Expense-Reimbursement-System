@@ -26,7 +26,7 @@ document.getElementById("buttonRow").style.display = 'block';
 
 
 async function getUser(username){
-  let response = await fetch(URL+"ErsUser/"+username, {credential:"include"});
+  let response = await fetch(URL+"ErsUser/"+username, {credentials:"include"});
   if(response.status === 200){
     let data = await response.json();
     return data;
@@ -49,9 +49,9 @@ async function login(){
         body:JSON.stringify(user),
         credentials:"include" 
       });
-
+      console.log(response.status);
       if(response.status===200){
-        let data = await response.json();
+        let data = await getUser(user.username);
         sessionStorage.setItem("login",JSON.stringify(login));
         document.getElementsByClassName("login").innerHTML = '';
 
