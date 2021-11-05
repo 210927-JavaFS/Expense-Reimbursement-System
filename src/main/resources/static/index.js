@@ -7,7 +7,7 @@ let registerButton = document.getElementById("registerButton");
 let requestReimbButton = document.getElementById('requestReimbButton');
 let showReimsButton = document.createElement("button");
 let getByStatusButton = document.getElementById("reimbByStatus");
-
+let getByIdButton = document.getElementById("reimbById");
 
 loginButton.onclick = login; 
 logoutButton.onclick = logout;
@@ -15,6 +15,7 @@ registerButton.onclick = addUser;
 requestReimbButton.onclick = addReimb;
 showReimsButton.onclick = showReimbs;
 getByStatusButton.onclick = getByStatus;
+getByIdButton.onclick = getById;
 
 showReimsButton.innerText = "View All Reimbursements";
 showReimsButton.className ="btn btn-primary";
@@ -23,6 +24,18 @@ showReimsButton.className ="btn btn-primary";
 
 buttonRow.appendChild(showReimsButton);
 document.getElementById("buttonRow").style.display = 'block';
+
+async function getById(){
+  let Id = document.getElementById("Id").value;
+  let response = await fetch(URL+"ErsReimbursement/"+Id, {credentials:"include"});
+  if(response.status === 200){
+    let data = await response.json();
+    populateReimbTable(data);
+  }
+  else{
+    console.log("Failed to get reimbs.")
+  }
+}
 
 async function getByStatus(){
   let statusId = document.getElementById("status").value;
