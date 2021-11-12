@@ -1,276 +1,4 @@
-12:40:31.798 [] [main] INFO  org.eclipse.jetty.util.log - Logging initialized @335ms to org.eclipse.jetty.util.log.Slf4jLog
-12:40:31.839 [] [main] INFO  io.javalin.Javalin - Static file handler added:
-    {urlPathPrefix: "/", path: "/static", location: Location.CLASSPATH}
-    Resolved path: 'file:///C:/Users/monke/Desktop/Project1/project1-AAcosta9600/target/classes/static/'
-12:40:31.878 [] [main] INFO  io.javalin.Javalin - 
-           __                      __ _
-          / /____ _ _   __ ____ _ / /(_)____
-     __  / // __ `/| | / // __ `// // // __ \
-    / /_/ // /_/ / | |/ // /_/ // // // / / /
-    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
 
-        https://javalin.io/documentation
-
-12:40:31.879 [] [main] INFO  io.javalin.Javalin - Starting Javalin ...
-12:40:32.007 [] [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
-12:40:32.007 [] [main] INFO  io.javalin.Javalin - Javalin started in 129ms \o/
-12:40:36.790 [] [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
-12:40:36.790 [] [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
-12:40:36.791 [] [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#starting-and-stopping
-12:40:45.616 [] [qtp517254671-23] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.0.Final
-12:40:45.907 [] [qtp517254671-23] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-12:40:45.975 [] [qtp517254671-23] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-12:40:45.979 [] [qtp517254671-23] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://javafs-210927.csmrxzq1bxmv.us-east-2.rds.amazonaws.com:5432/postgres]
-12:40:45.979 [] [qtp517254671-23] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
-12:40:45.979 [] [qtp517254671-23] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-12:40:45.980 [] [qtp517254671-23] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-12:40:46.807 [] [qtp517254671-23] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-12:40:47.385 [] [qtp517254671-23] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@428a975] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-12:40:48.397 [] [qtp517254671-23] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:51:02.415 [] [main] INFO  org.eclipse.jetty.util.log - Logging initialized @344ms to org.eclipse.jetty.util.log.Slf4jLog
-12:51:02.457 [] [main] INFO  io.javalin.Javalin - Static file handler added:
-    {urlPathPrefix: "/", path: "/static", location: Location.CLASSPATH}
-    Resolved path: 'file:///C:/Users/monke/Desktop/Project1/project1-AAcosta9600/target/classes/static/'
-12:51:02.497 [] [main] INFO  io.javalin.Javalin - 
-           __                      __ _
-          / /____ _ _   __ ____ _ / /(_)____
-     __  / // __ `/| | / // __ `// // // __ \
-    / /_/ // /_/ / | |/ // /_/ // // // / / /
-    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
-
-        https://javalin.io/documentation
-
-12:51:02.498 [] [main] INFO  io.javalin.Javalin - Starting Javalin ...
-12:51:02.625 [] [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
-12:51:02.625 [] [main] INFO  io.javalin.Javalin - Javalin started in 128ms \o/
-12:51:07.409 [] [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
-12:51:07.410 [] [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
-12:51:07.410 [] [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#starting-and-stopping
-12:51:12.811 [] [qtp517254671-17] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.0.Final
-12:51:13.115 [] [qtp517254671-17] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-12:51:13.179 [] [qtp517254671-17] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-12:51:13.183 [] [qtp517254671-17] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://javafs-210927.csmrxzq1bxmv.us-east-2.rds.amazonaws.com:5432/postgres]
-12:51:13.183 [] [qtp517254671-17] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
-12:51:13.183 [] [qtp517254671-17] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-12:51:13.185 [] [qtp517254671-17] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-12:51:13.860 [] [qtp517254671-17] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-12:51:14.419 [] [qtp517254671-17] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@34bb73fe] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-12:51:15.431 [] [qtp517254671-17] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-13:58:30.094 [] [main] INFO  org.eclipse.jetty.util.log - Logging initialized @337ms to org.eclipse.jetty.util.log.Slf4jLog
-13:58:30.134 [] [main] INFO  io.javalin.Javalin - Static file handler added:
-    {urlPathPrefix: "/", path: "/static", location: Location.CLASSPATH}
-    Resolved path: 'file:///C:/Users/monke/Desktop/Project1/project1-AAcosta9600/target/classes/static/'
-13:58:30.172 [] [main] INFO  io.javalin.Javalin - 
-           __                      __ _
-          / /____ _ _   __ ____ _ / /(_)____
-     __  / // __ `/| | / // __ `// // // __ \
-    / /_/ // /_/ / | |/ // /_/ // // // / / /
-    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
-
-        https://javalin.io/documentation
-
-13:58:30.173 [] [main] INFO  io.javalin.Javalin - Starting Javalin ...
-13:58:30.300 [] [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
-13:58:30.300 [] [main] INFO  io.javalin.Javalin - Javalin started in 127ms \o/
-13:58:35.087 [] [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
-13:58:35.087 [] [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
-13:58:35.087 [] [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#starting-and-stopping
-13:58:50.938 [] [qtp1422238463-22] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.0.Final
-13:58:51.210 [] [qtp1422238463-22] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-13:58:51.276 [] [qtp1422238463-22] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-13:58:51.280 [] [qtp1422238463-22] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://javafs-210927.csmrxzq1bxmv.us-east-2.rds.amazonaws.com:5432/postgres]
-13:58:51.281 [] [qtp1422238463-22] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
-13:58:51.281 [] [qtp1422238463-22] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-13:58:51.282 [] [qtp1422238463-22] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-13:58:51.981 [] [qtp1422238463-22] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-13:58:52.517 [] [qtp1422238463-22] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6b8cd80d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-13:58:53.493 [] [qtp1422238463-22] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-14:08:00.172 [] [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.0.Final
-14:08:00.463 [] [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-14:08:00.581 [] [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-14:08:00.585 [] [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://javafs-210927.csmrxzq1bxmv.us-east-2.rds.amazonaws.com:5432/postgres]
-14:08:00.585 [] [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
-14:08:00.586 [] [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-14:08:00.588 [] [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-14:08:01.346 [] [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-14:08:01.872 [] [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5438c17a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-14:08:02.886 [] [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-14:40:09.563 [] [main] INFO  org.eclipse.jetty.util.log - Logging initialized @346ms to org.eclipse.jetty.util.log.Slf4jLog
-14:40:09.604 [] [main] INFO  io.javalin.Javalin - Static file handler added:
-    {urlPathPrefix: "/", path: "/static", location: Location.CLASSPATH}
-    Resolved path: 'file:///C:/Users/monke/Desktop/Project1/project1-AAcosta9600/target/classes/static/'
-14:40:09.642 [] [main] INFO  io.javalin.Javalin - 
-           __                      __ _
-          / /____ _ _   __ ____ _ / /(_)____
-     __  / // __ `/| | / // __ `// // // __ \
-    / /_/ // /_/ / | |/ // /_/ // // // / / /
-    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
-
-        https://javalin.io/documentation
-
-14:40:09.643 [] [main] INFO  io.javalin.Javalin - Starting Javalin ...
-14:40:09.766 [] [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
-14:40:09.766 [] [main] INFO  io.javalin.Javalin - Javalin started in 124ms \o/
-14:40:14.560 [] [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
-14:40:14.560 [] [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
-14:40:14.560 [] [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#starting-and-stopping
-14:40:21.459 [] [qtp1422238463-20] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.0.Final
-14:40:21.745 [] [qtp1422238463-20] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-14:40:21.809 [] [qtp1422238463-20] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-14:40:21.813 [] [qtp1422238463-20] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://javafs-210927.csmrxzq1bxmv.us-east-2.rds.amazonaws.com:5432/postgres]
-14:40:21.814 [] [qtp1422238463-20] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
-14:40:21.814 [] [qtp1422238463-20] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-14:40:21.815 [] [qtp1422238463-20] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-14:40:22.447 [] [qtp1422238463-20] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-14:40:23.013 [] [qtp1422238463-20] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7d6b1d6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-14:40:24.028 [] [qtp1422238463-20] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-14:53:52.279 [] [main] INFO  org.eclipse.jetty.util.log - Logging initialized @332ms to org.eclipse.jetty.util.log.Slf4jLog
-14:53:52.318 [] [main] INFO  io.javalin.Javalin - Static file handler added:
-    {urlPathPrefix: "/", path: "/static", location: Location.CLASSPATH}
-    Resolved path: 'file:///C:/Users/monke/Desktop/Project1/project1-AAcosta9600/target/classes/static/'
-14:53:52.356 [] [main] INFO  io.javalin.Javalin - 
-           __                      __ _
-          / /____ _ _   __ ____ _ / /(_)____
-     __  / // __ `/| | / // __ `// // // __ \
-    / /_/ // /_/ / | |/ // /_/ // // // / / /
-    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
-
-        https://javalin.io/documentation
-
-14:53:52.357 [] [main] INFO  io.javalin.Javalin - Starting Javalin ...
-14:53:52.481 [] [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
-14:53:52.482 [] [main] INFO  io.javalin.Javalin - Javalin started in 126ms \o/
-14:53:57.262 [] [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
-14:53:57.262 [] [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
-14:53:57.263 [] [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#starting-and-stopping
-14:54:18.960 [] [qtp1422238463-21] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.0.Final
-14:54:19.242 [] [qtp1422238463-21] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-14:54:19.308 [] [qtp1422238463-21] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-14:54:19.313 [] [qtp1422238463-21] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://javafs-210927.csmrxzq1bxmv.us-east-2.rds.amazonaws.com:5432/postgres]
-14:54:19.313 [] [qtp1422238463-21] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
-14:54:19.313 [] [qtp1422238463-21] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-14:54:19.314 [] [qtp1422238463-21] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-14:54:19.955 [] [qtp1422238463-21] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-14:54:20.494 [] [qtp1422238463-21] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3b8dd46f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-14:54:21.451 [] [qtp1422238463-21] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-15:24:55.934 [] [main] INFO  org.eclipse.jetty.util.log - Logging initialized @371ms to org.eclipse.jetty.util.log.Slf4jLog
-15:24:55.982 [] [main] INFO  io.javalin.Javalin - Static file handler added:
-    {urlPathPrefix: "/", path: "/static", location: Location.CLASSPATH}
-    Resolved path: 'file:///C:/Users/monke/Desktop/Project1/project1-AAcosta9600/target/classes/static/'
-15:24:56.031 [] [main] INFO  io.javalin.Javalin - 
-           __                      __ _
-          / /____ _ _   __ ____ _ / /(_)____
-     __  / // __ `/| | / // __ `// // // __ \
-    / /_/ // /_/ / | |/ // /_/ // // // / / /
-    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
-
-        https://javalin.io/documentation
-
-15:24:56.031 [] [main] INFO  io.javalin.Javalin - Starting Javalin ...
-15:24:56.175 [] [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
-15:24:56.175 [] [main] INFO  io.javalin.Javalin - Javalin started in 144ms \o/
-15:25:00.928 [] [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
-15:25:00.928 [] [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
-15:25:00.928 [] [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#starting-and-stopping
-15:25:17.159 [] [qtp517254671-22] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.0.Final
-15:25:17.456 [] [qtp517254671-22] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-15:25:17.525 [] [qtp517254671-22] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-15:25:17.529 [] [qtp517254671-22] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://javafs-210927.csmrxzq1bxmv.us-east-2.rds.amazonaws.com:5432/postgres]
-15:25:17.529 [] [qtp517254671-22] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
-15:25:17.529 [] [qtp517254671-22] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
-15:25:17.531 [] [qtp517254671-22] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
-15:25:18.136 [] [qtp517254671-22] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-15:25:18.722 [] [qtp517254671-22] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@91e66d4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-15:25:19.691 [] [qtp517254671-22] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-15:26:05.814 [] [qtp517254671-22] WARN  io.javalin.Javalin - Uncaught exception
-java.lang.IllegalStateException: Multiple representations of the same entity [com.revature.models.ErsUser#1] are being merged. Detached: [ErsUser [ersUserId=1, ersUsername=employee, ersPassword=pass, userFirstName=firstname, userLastName=lastname, userEmail=employee@revature.net, userRoleId=ErsUserRole [ersUserRoleId=1, Role=Employee]]]; Detached: [ErsUser [ersUserId=1, ersUsername=employee, ersPassword=pass, userFirstName=firstname, userLastName=lastname, userEmail=employee@revature.net, userRoleId=ErsUserRole [ersUserRoleId=1, Role=Employee]]]
-	at org.hibernate.event.internal.EntityCopyNotAllowedObserver.entityCopyDetected(EntityCopyNotAllowedObserver.java:45)
-	at org.hibernate.event.internal.MergeContext.put(MergeContext.java:245)
-	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:322)
-	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:172)
-	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:118)
-	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:853)
-	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:826)
-	at org.hibernate.engine.spi.CascadingActions$6.cascade(CascadingActions.java:261)
-	at org.hibernate.engine.internal.Cascade.cascadeToOne(Cascade.java:510)
-	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:434)
-	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:220)
-	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:153)
-	at org.hibernate.event.internal.DefaultMergeEventListener.cascadeOnMerge(DefaultMergeEventListener.java:518)
-	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:346)
-	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:172)
-	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:70)
-	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
-	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:833)
-	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:820)
-	at com.revature.DAO.ErsReimbursementDAOImpl.updateReimbursement(ErsReimbursementDAOImpl.java:59)
-	at com.revature.service.ErsReimbursementService.updateReimbursement(ErsReimbursementService.java:34)
-	at com.revature.controllers.ErsReimbursementController.lambda$5(ErsReimbursementController.java:93)
-	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
-	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:128)
-	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
-	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
-	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:136)
-	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
-	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
-	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
-	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
-	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
-	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
-	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
-	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
-	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
-	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
-	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
-	at org.eclipse.jetty.server.Server.handle(Server.java:516)
-	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:388)
-	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:633)
-	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:380)
-	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
-	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
-	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
-	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
-	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:386)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-15:44:06.136 [] [main] INFO  org.eclipse.jetty.util.log - Logging initialized @352ms to org.eclipse.jetty.util.log.Slf4jLog
-15:44:06.178 [] [main] INFO  io.javalin.Javalin - Static file handler added:
-    {urlPathPrefix: "/", path: "/static", location: Location.CLASSPATH}
-    Resolved path: 'file:///C:/Users/monke/Desktop/Project1/project1-AAcosta9600/target/classes/static/'
-15:44:06.219 [] [main] INFO  io.javalin.Javalin - 
-           __                      __ _
-          / /____ _ _   __ ____ _ / /(_)____
-     __  / // __ `/| | / // __ `// // // __ \
-    / /_/ // /_/ / | |/ // /_/ // // // / / /
-    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
-
-        https://javalin.io/documentation
-
-15:44:06.220 [] [main] INFO  io.javalin.Javalin - Starting Javalin ...
-15:44:06.314 [] [main] ERROR io.javalin.Javalin - Failed to start Javalin
-15:44:06.315 [] [main] INFO  io.javalin.Javalin - Stopping Javalin ...
-15:44:06.318 [] [main] INFO  io.javalin.Javalin - Javalin has stopped
-15:44:11.122 [] [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
-15:44:11.122 [] [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
-15:44:11.122 [] [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#starting-and-stopping
-15:44:31.712 [] [main] INFO  org.eclipse.jetty.util.log - Logging initialized @350ms to org.eclipse.jetty.util.log.Slf4jLog
-15:44:31.753 [] [main] INFO  io.javalin.Javalin - Static file handler added:
-    {urlPathPrefix: "/", path: "/static", location: Location.CLASSPATH}
-    Resolved path: 'file:///C:/Users/monke/Desktop/Project1/project1-AAcosta9600/target/classes/static/'
-15:44:31.793 [] [main] INFO  io.javalin.Javalin - 
            __                      __ _
           / /____ _ _   __ ____ _ / /(_)____
      __  / // __ `/| | / // __ `// // // __ \
@@ -426,3 +154,247 @@ Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "
 	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
 	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
 	... 58 common frames omitted
+16:10:54.333 [] [main] INFO  org.eclipse.jetty.util.log - Logging initialized @332ms to org.eclipse.jetty.util.log.Slf4jLog
+16:10:54.373 [] [main] INFO  io.javalin.Javalin - Static file handler added:
+    {urlPathPrefix: "/", path: "/static", location: Location.CLASSPATH}
+    Resolved path: 'file:///C:/Users/monke/Desktop/Project1/project1-AAcosta9600/target/classes/static/'
+16:10:54.413 [] [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+16:10:54.414 [] [main] INFO  io.javalin.Javalin - Starting Javalin ...
+16:10:54.541 [] [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+16:10:54.541 [] [main] INFO  io.javalin.Javalin - Javalin started in 128ms \o/
+16:10:59.318 [] [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+16:10:59.318 [] [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+16:10:59.318 [] [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#starting-and-stopping
+16:11:20.014 [] [qtp1422238463-23] INFO  myLogger - Attempt login
+16:11:20.188 [] [qtp1422238463-23] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.0.Final
+16:11:20.487 [] [qtp1422238463-23] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:11:20.555 [] [qtp1422238463-23] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+16:11:20.560 [] [qtp1422238463-23] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://javafs-210927.csmrxzq1bxmv.us-east-2.rds.amazonaws.com:5432/postgres]
+16:11:20.560 [] [qtp1422238463-23] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+16:11:20.560 [] [qtp1422238463-23] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+16:11:20.561 [] [qtp1422238463-23] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+16:11:21.180 [] [qtp1422238463-23] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+16:11:21.759 [] [qtp1422238463-23] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5d1b52cc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:11:22.798 [] [qtp1422238463-23] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:11:23.074 [] [qtp1422238463-23] INFO  myLogger - Attempt Successful
+16:12:09.870 [] [qtp1422238463-18] INFO  myLogger - Attempt login
+16:12:10.010 [] [qtp1422238463-18] INFO  myLogger - Attempt Successful
+16:12:32.051 [] [qtp1422238463-18] INFO  myLogger - Attempt to get all Reimbs
+16:12:32.401 [] [qtp1422238463-18] INFO  myLogger - Attempt Successful
+16:12:37.657 [] [qtp1422238463-19] INFO  myLogger - Attempt to get Reimbs by status
+16:12:37.867 [] [qtp1422238463-19] INFO  myLogger - Attempt Successful
+16:12:49.242 [] [qtp1422238463-18] INFO  myLogger - Attempt to get Reimbs by id
+16:12:49.336 [] [qtp1422238463-18] INFO  myLogger - Attempt Successful
+16:12:49.339 [] [qtp1422238463-19] INFO  myLogger - Attempt to update reimb
+16:12:49.460 [] [qtp1422238463-19] INFO  myLogger - Attempt Successful
+16:12:54.872 [] [qtp1422238463-18] INFO  myLogger - Attempt to get all Reimbs
+16:12:55.291 [] [qtp1422238463-18] INFO  myLogger - Attempt Successful
+16:13:03.067 [] [qtp1422238463-19] INFO  myLogger - Attempt to get Reimbs by id
+16:13:03.199 [] [qtp1422238463-19] INFO  myLogger - Attempt Successful
+16:13:16.692 [] [qtp1422238463-18] INFO  myLogger - Attempt to get Reimbs by id
+16:13:16.785 [] [qtp1422238463-18] INFO  myLogger - Attempt Successful
+17:02:14.431 [] [main] INFO  org.eclipse.jetty.util.log - Logging initialized @355ms to org.eclipse.jetty.util.log.Slf4jLog
+17:02:14.473 [] [main] INFO  io.javalin.Javalin - Static file handler added:
+    {urlPathPrefix: "/", path: "/static", location: Location.CLASSPATH}
+    Resolved path: 'file:///C:/Users/monke/Desktop/Project1/project1-AAcosta9600/target/classes/static/'
+17:02:14.515 [] [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+17:02:14.516 [] [main] INFO  io.javalin.Javalin - Starting Javalin ...
+17:02:14.643 [] [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+17:02:14.643 [] [main] INFO  io.javalin.Javalin - Javalin started in 128ms \o/
+17:02:19.420 [] [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+17:02:19.420 [] [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+17:02:19.420 [] [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#starting-and-stopping
+17:02:37.605 [] [qtp1422238463-20] INFO  myLogger - Attempt login
+17:02:37.780 [] [qtp1422238463-20] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.0.Final
+17:02:38.073 [] [qtp1422238463-20] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:02:38.137 [] [qtp1422238463-20] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:02:38.141 [] [qtp1422238463-20] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://javafs-210927.csmrxzq1bxmv.us-east-2.rds.amazonaws.com:5432/postgres]
+17:02:38.141 [] [qtp1422238463-20] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+17:02:38.141 [] [qtp1422238463-20] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+17:02:38.142 [] [qtp1422238463-20] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+17:02:38.768 [] [qtp1422238463-20] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17:02:39.297 [] [qtp1422238463-20] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@30a6df4b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:02:40.349 [] [qtp1422238463-20] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:02:40.550 [] [qtp1422238463-20] WARN  io.javalin.Javalin - Uncaught exception
+javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1667)
+	at com.revature.DAO.ErsUserDAOImpl.getUser(ErsUserDAOImpl.java:19)
+	at com.revature.service.ErsUserService.login(ErsUserService.java:25)
+	at com.revature.controllers.ErsUserController.lambda$3(ErsUserController.java:67)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:128)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:136)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:388)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:633)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:380)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:386)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+17:03:15.941 [] [qtp1422238463-18] INFO  myLogger - Attempt to register
+17:03:16.127 [] [qtp1422238463-18] INFO  myLogger - Attempt Successful
+17:03:34.024 [] [qtp1422238463-23] INFO  myLogger - Attempt login
+17:03:34.181 [] [qtp1422238463-23] INFO  myLogger - Attempt Successful
+17:03:46.457 [] [qtp1422238463-23] INFO  myLogger - Attempt to get Reimbs by user
+17:03:46.553 [] [qtp1422238463-23] INFO  myLogger - Attempt Successful
+17:03:59.857 [] [qtp1422238463-19] INFO  myLogger - Attempt to add Reimb
+17:04:00.046 [] [qtp1422238463-19] INFO  myLogger - Attempt Successful
+17:04:02.507 [] [qtp1422238463-23] INFO  myLogger - Attempt to get Reimbs by user
+17:04:02.745 [] [qtp1422238463-23] INFO  myLogger - Attempt Successful
+17:04:16.634 [] [qtp1422238463-19] INFO  myLogger - Attempt to get Reimbs by user
+17:04:16.725 [] [qtp1422238463-19] INFO  myLogger - Attempt Successful
+17:04:40.991 [] [qtp1422238463-23] INFO  myLogger - Attempt login
+17:04:41.131 [] [qtp1422238463-23] INFO  myLogger - Attempt Successful
+17:04:44.916 [] [qtp1422238463-23] INFO  myLogger - Attempt to get all Reimbs
+17:04:45.203 [] [qtp1422238463-23] INFO  myLogger - Attempt Successful
+17:05:03.211 [] [qtp1422238463-19] INFO  myLogger - Attempt to get Reimbs by status
+17:05:03.399 [] [qtp1422238463-19] INFO  myLogger - Attempt Successful
+17:05:08.253 [] [qtp1422238463-23] INFO  myLogger - Attempt to get Reimbs by status
+17:05:08.441 [] [qtp1422238463-23] INFO  myLogger - Attempt Successful
+17:05:12.165 [] [qtp1422238463-19] INFO  myLogger - Attempt to get Reimbs by status
+17:05:12.353 [] [qtp1422238463-19] INFO  myLogger - Attempt Successful
+17:05:18.972 [] [qtp1422238463-23] INFO  myLogger - Attempt to get Reimbs by id
+17:05:19.067 [] [qtp1422238463-23] INFO  myLogger - Attempt Successful
+17:05:19.070 [] [qtp1422238463-19] INFO  myLogger - Attempt to update reimb
+17:05:19.172 [] [qtp1422238463-19] INFO  myLogger - Attempt Successful
+17:05:25.930 [] [qtp1422238463-23] INFO  myLogger - Attempt to get Reimbs by status
+17:05:26.363 [] [qtp1422238463-23] INFO  myLogger - Attempt Successful
+17:05:37.165 [] [qtp1422238463-19] INFO  myLogger - Attempt to get Reimbs by id
+17:05:37.258 [] [qtp1422238463-19] INFO  myLogger - Attempt Successful
+17:05:57.007 [] [qtp1422238463-23] INFO  myLogger - Attempt to add Reimb
+17:05:57.197 [] [qtp1422238463-23] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+17:05:57.197 [] [qtp1422238463-23] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: insert or update on table "ersreimbursement" violates foreign key constraint "fk33c9d6xpnm0f0sw4lrl0qtmqh"
+  Detail: Key (reimbtypeid_reimbtypeid)=(0) is not present in table "ersreimbursementtype".
+17:05:57.250 [] [qtp1422238463-23] WARN  io.javalin.Javalin - Uncaught exception
+javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:154)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1406)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:493)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3285)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2420)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at com.revature.DAO.ErsReimbursementDAOImpl.addReimbursement(ErsReimbursementDAOImpl.java:44)
+	at com.revature.service.ErsReimbursementService.addReimbursement(ErsReimbursementService.java:30)
+	at com.revature.controllers.ErsReimbursementController.lambda$4(ErsReimbursementController.java:103)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:128)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:136)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:388)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:633)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:380)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:386)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:109)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:200)
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3576)
+	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3438)
+	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3852)
+	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:201)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:723)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1402)
+	... 51 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "ersreimbursement" violates foreign key constraint "fk33c9d6xpnm0f0sw4lrl0qtmqh"
+  Detail: Key (reimbtypeid_reimbtypeid)=(0) is not present in table "ersreimbursementtype".
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2565)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2297)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:164)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:130)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	... 63 common frames omitted
